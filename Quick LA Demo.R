@@ -1,12 +1,12 @@
 library(tidyverse)
 
-Advertising =  dbGetQuery(con2,"
-SELECT 
-                           [TV]
-                           ,[Radio]
-                           ,[Sales]
-                           FROM [dbo].[Advertising]
-                           ")
+Advertising = read_csv("C:/Users/ellen/OneDrive/Documents/GitHub/EllenwTerry/Foundations/Advertising.csv")
+Advertising = select(Advertising, TV, Radio, Sales)
+
+mFit <- lm(Sales ~ TV + Radio, data = Advertising)
+mFit$coefficients
+Advertising$yhat <- predict(mFit, Advertising)
+
 
 mFit = lm(Sales ~ TV + Radio, data = Advertising)
 mFit$coefficients
