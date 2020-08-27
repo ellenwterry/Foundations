@@ -1,6 +1,5 @@
-suppressMessages(library(pracma))
-suppressMessages(library(tidyverse))
-
+library(pracma)
+library(tidyverse)
 
 A = matrix(c(3, 0, 4, -2, 3, 4, 3, 5, 4), ncol = 3, nrow = 3)
 A
@@ -12,20 +11,15 @@ Q
 Q %*% R
 
 
-
-
 R2 = R[1:2,1:2]
 C = R[1:2, 3]
 betahat <- backsolve(R2, C)
 betahat
 
 
-
-
-
 # === example 2
 
-setwd("C:/Users/ellen/OneDrive/Documents/Spring 2020/Temp Workig - Google/Spring2020/Spring2020/DA2/Section I/Introduction/data")
+setwd("C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations")
 
 mydata <- read.csv(file="Ex1LS.csv", header=TRUE, sep=",")
 model <- lm( Y ~ X ,mydata)
@@ -50,7 +44,8 @@ betahat <- backsolve(R2, C)
 betahat
 
 
-mydata2 = read.csv(file="Ex1LS2.csv", header=TRUE, sep=",")
+
+mydata2 = read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Ex1LS2.csv", header=TRUE, sep=",")
 model2 = lm( Y ~ ., mydata2)
 model2$coefficients
 

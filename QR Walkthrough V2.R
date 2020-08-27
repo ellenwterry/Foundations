@@ -1,18 +1,17 @@
-suppressMessages(library(pracma))
-suppressMessages(library(tidyverse))
+library(pracma)
+library(tidyverse)
 
 # this removes the function and walks through the code lines so that you can see how the 
 # columns and rows are transformed to get the diagonal matrix
 
 
 
-setwd("/home/ellen/Documents/Spring2020/DA2/Section I/Introduction/data/")
 
 
 # ------------------- two variable model ----------------------- #
 
 
-mydata <- read.csv(file="Ex1LS2.csv", header=TRUE, sep=",")
+mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Ex1LS2.csv", header=TRUE, sep=",")
 model <- lm( Y ~ ., mydata)
 model$coefficients
 
@@ -26,7 +25,7 @@ y
 
 
 
-#------ we won't use the function so it's easier to trace variables 
+#------ we won't use the function but it's easier to trace variables 
 
   nr <- length(y)
   nc <- NCOL(X)

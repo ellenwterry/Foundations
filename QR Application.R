@@ -1,9 +1,6 @@
 suppressMessages(library(pracma))
 suppressMessages(library(tidyverse))
 
-setwd("/home/ellen/Documents/Spring2020/DA2/Section I/Introduction/data/")
-
-
 QR.regression <- function(y, X)
 {
   nr <- length(y)
@@ -54,7 +51,7 @@ QR.regression <- function(y, X)
 # --------- 1 variable model -------------------------------#
 
 
-mydata <- read.csv(file="Ex1LS2.csv", header=TRUE, sep=",")
+mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Ex1LS2.csv", header=TRUE, sep=",")
 model <- lm( Y ~ X1 ,mydata)
 model$coefficients
 
@@ -77,7 +74,7 @@ array(c(b_0, b_1))
 
 # ----------------- 2 variable model ---------------------- #
 
-mydata <- read.csv(file="Ex1LS2.csv", header=TRUE, sep=",")
+mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Ex1LS2.csv", header=TRUE, sep=",")
 
 model <- lm( Y ~ ., mydata)
 model$coefficients
@@ -113,7 +110,7 @@ array(c(b_2, b_1, b_0))
 
 # ------------------ auto regression ---------------#
 
-Autos <- read.csv(file="Automobile Price Prediction.csv")
+Autos <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Automobile Price Prediction.csv")
 Autos <- select(Autos, wheel.base, engine.size, horsepower, highway.mpg, price )
 
 model <- lm( price ~ ., Autos)
@@ -134,24 +131,4 @@ res$beta
 R <- res$R
 R
   
-
-# ------------------ auto regression with categorical ---------------#
-
-Autos <- read_csv(file="Automobile Price Prediction.csv")
-Autos <- select(Autos, make, horsepower, price )
-Autos = filter(Autos, make %in% c("audi", "bmw", "honda"))
-model <- lm( price ~ ., Autos)
-
-model$coefficients
-
-X <- model.matrix(price ~ ., Autos)
-Y <- Autos$price
-
-res <- QR.regression(Y, X)
-
-res$beta
-
-R <- res$R
-R
-
 

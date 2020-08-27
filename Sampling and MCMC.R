@@ -1,5 +1,5 @@
-suppressMessages(library(tidyverse))
-suppressMessages(library(plotly))
+library(tidyverse)
+library(plotly)
 
 n = 10000
 genSample = function()

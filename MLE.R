@@ -1,5 +1,5 @@
-suppressMessages(library(tidyverse))
-suppressMessages(library(plotly))
+library(tidyverse)
+library(plotly)
 
 # recall from above how a binomial distribution works
 
@@ -28,8 +28,7 @@ p <- plot_ly (data = bNomLikePlot, x = ~ x, y = ~y, type = 'scatter', mode = 'li
   layout(xaxis = list(title = "mu"), yaxis = list(title = "Likelihood"))
 p
 
-
-
+  
 # Plotting the Log Likelihood function 
 
 bNomLogLikePlot = data.frame(x = mu, y = l(mu, K, N))
@@ -37,7 +36,6 @@ bNomLogLikePlot = data.frame(x = mu, y = l(mu, K, N))
 p <- plot_ly (data = bNomLogLikePlot, x = ~x, y = ~y, type = 'scatter', mode = 'lines') %>% 
   layout(xaxis = list(title = "mu"), yaxis = list(title = "Log Likelihood"))
 p
-
 
 
 # The optimization functions in R finds the minimum, not the maximum. We  
@@ -72,7 +70,6 @@ x2 <- data.frame(x = df2$x, y = df2$y)
 p <- plot_ly (x = ~x2$x, y = ~ x2$y, type = 'scatter', mode = 'lines') %>% 
   layout(xaxis = list(title = "mu"), yaxis = list(title = "Likelihood"))
 p
-
 
 testData = data.frame(x = x)
 # testData
@@ -123,6 +120,7 @@ dfSurface <- data.frame(minLL)
 tst = matrix(dfSurface$X3, nrow = 10)
 x <- mu1
 y <- sigma1
+
 plot_ly() %>% add_surface(x = ~x, y = ~y, z = ~tst) %>%
   layout(
     title = "Minimum Log Likelihood",
@@ -178,7 +176,6 @@ linear.MLE$par[1]
 mod$coefficients[1]
 linear.MLE$par[2]
 mod$coefficients[2]
-
 
 plot_ly(data = data, x = ~ x) %>% 
   add_markers(y = ~y) %>% 

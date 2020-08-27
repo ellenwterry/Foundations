@@ -1,5 +1,6 @@
-suppressMessages(library(tidyverse))
-suppressMessages(library(plotly))
+library(tidyverse)
+library(plotly)
+
 
 Intercept <- 3.5
 b_1 <- 1.4
@@ -29,18 +30,26 @@ colnames(dfFunChartPts)[1] <- "Theta2"
 colnames(dfFunChartPts)[2] <- "Cost"
 
 p = plot_ly(dfFunChartPts, x = ~Theta2, y = ~Cost, type = 'scatter', mode = 'lines+markers', name = 'function') 
+p
+
+# just for reference in case plotly not installed
+
+#p = ggplot(dfFunChartPts, aes(x = Theta2, y = Cost)) +
+#  geom_point(color = "blue") +
+#  geom_line(color = "blue") +
+#  theme(panel.background = element_rect(fill = "white")) 
+#p           
+
 
 # set up the gradient descent
 
-p
-
 
 # now decrease the threshold
-alpha <- 0.2
+alpha <- 0.001
 # start with .001, increase to .01 and .1 and finally, .2
 
 # holding alpha at .2
-epsilon <- 2
+epsilon <- .001
 # start with .001, increase to .1 and 1 and finally, 2
 
 
@@ -69,4 +78,8 @@ round(theta,1)
 p2 = p %>%
   add_trace(data = dfChartPts, y = ~Cost, mode = 'markers', name = 'GD pts')
 p2
+
+#p = p + geom_point(data = dfChartPts, aes(y = Cost), color = "red") 
+#p
+
 
