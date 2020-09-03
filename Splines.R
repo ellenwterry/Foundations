@@ -1,8 +1,7 @@
 library(ggplot2)
 library(splines)
 
-setwd("C:/Users/ellen/OneDrive/Documents/Spring 2020/DA2/Section 1/Regression/Data")
-mydata <- read.csv(file="Ex1LS.csv", header=TRUE, sep=",")
+mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Data/Ex1LS.csv", header=TRUE, sep=",")
 
 mydata$X1 <- mydata$X
 
@@ -13,23 +12,21 @@ model <- lm( formula = Y ~ X, mydata)
 modelQ <- lm( formula = Y ~ X + I(X^2), mydata)
 modelNS <- lm(data = mydata, Y ~ ns(X, 2)) # you can also specifically set knots, but beware
 
-predData <- data.frame(X = seq(1, 10, 1)) # i'm doing this so we can see how the trained models perform
+predData <- data.frame(X = seq(1, 4, .11)) # i'm doing this so we can see how the trained models perform
 # on a denser dataset
 
 predData$Y <- predict(model, predData)
 predData$Q <- predict(modelQ, predData)
 predData$NS <- predict(modelNS, predData)
 
-p <- ggplot(predData, aes(x=X, y=Y)) + geom_point()
-p <- p + geom_point(data = predData, aes(x=X, y = Y), color = 'black')
-p <- p + geom_point(data = predData, aes(x=X, y = Q), color = 'red')
-p <- p + geom_point(data = predData, aes(x=X, y = NS), color = 'blue')
+#p <- ggplot(predData, aes(x=X, y=Y)) + geom_point()
+#p <- p + geom_point(data = predData, aes(x=X, y = Y), color = 'black')
+#p <- p + geom_point(data = predData, aes(x=X, y = Q), color = 'red')
+#p <- p + geom_point(data = predData, aes(x=X, y = NS), color = 'blue')
 p <- p + geom_smooth(data=predData, aes(x=X, y = Y), se=FALSE, color = "black")
 p <- p + geom_smooth(data=predData, aes(x=X, y = Q), se=FALSE, color = "red")
 p <- p + geom_smooth(data=predData, aes(x=X, y = NS), se=FALSE, color = "blue")
 p
-
-
 
 summary(model)
 summary(modelQ)
@@ -38,8 +35,7 @@ summary(modelNS)
 
 
 
-setwd("C:/Users/ellen/OneDrive/Documents/Spring 2020/DA2/Section 1/Regression/Data")
-Auto <- read.csv(file="Automobile Price Prediction.csv")
+Auto <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Archive/Data_Files/Automobile Price Prediction.csv")
 
 p <- ggplot(Auto, aes(x=horsepower, y=price))+geom_point() 
 p
