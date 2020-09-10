@@ -1,9 +1,10 @@
 library(tidyverse)
 library(VGAM)
 
-setwd("C:/Users/ellen/OneDrive/Documents/Spring 2020/DA2/Section 1/Classification and SVM/Data")
-prog <- read.csv("programs.csv")
-prog$prog2 <- relevel(prog$prog, ref = "academic")
+prog <- read_csv("C:/Users/ellen/Documents/UH/Fall 2020/Class Materials/Classification and SVM/Data/programs.csv")
+
+
+set.seed(0907)
 
 fit.prog <- vglm(prog ~ math, family = multinomial, data = prog)
 coef(fit.prog, matrix = TRUE)
@@ -26,5 +27,9 @@ tst
 fit.prog <- vglm(prog ~ ses + write, family = multinomial, data = prog)
 vglmP <- predictvglm(fit.prog, type = "response")
 prog$Predict <-  colnames(vglmP)[max.col(vglmP,ties.method="first")]
-table(prog$Predict, prog$prog2)
+table(prog$Predict, prog$prog)
+
+unique(prog$math)
+
+prog %>% group_by(prog) %>% summarise(Cnt = n())
 
