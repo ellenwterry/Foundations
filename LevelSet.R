@@ -5,12 +5,8 @@ library(tidyverse)
 
 # normal equations
 
-Advertising <-  dbGetQuery(con2,"
-SELECT 
-                           [TV]
-                           ,[Sales]
-                           FROM [dbo].[Advertising]
-                           ")
+Advertising = read_csv("C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/Advertising.csv")
+
 
 vY = Advertising$Sales
 mX <- as.matrix(cbind(1, dplyr::select(Advertising, TV))) # set up x values in matrix
@@ -65,17 +61,20 @@ glm.fit <- glm(default ~ balance, data = dfDefault, family = binomial)
 summary(glm.fit)
 
 dfDefault$Prob <- predict(glm.fit, type = "response")
-p = ggplot(dfDefault, aes(x=balance, y=Prob)) + geom_point()  
-p
+
 # glm uses ML
 
 alpha <- glm.fit$coefficients[1]
 beta <- glm.fit$coefficients[2]
-tst1 = dfDefault[,3]
+tst1 = dfDefault$balance
+
 
 dfDefault$tmProb <- exp(alpha[1] + t(beta%*%t(tst1)))/(1+exp(alpha[1] + t(beta%*%t(tst1))))
+
 # looks like just as much effort, but it's not when you're working!!
-p = p + geom_point(data = dfDefault, aes(x = balance, y = tmProb), color = "red")
+p = 
+  ggplot(dfDefault, aes(x=balance, y=Prob)) + 
+  geom_point(color = "red")   
 p
 
 # Logistic Regression doesn't have a closed form solution
