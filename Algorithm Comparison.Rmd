@@ -1,0 +1,279 @@
+
+---
+title: "Classification 2 Homework"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+library(tidyverse)
+library(MASS)
+library(caret)
+library(kableExtra)
+library(e1071)
+library(ISLR)
+library(rpart)
+library(DMwR)
+
+```
+
+
+### Data
+Using the Default data from ISLR
+
+```{r, message=F, warning=F, fig.width=6, fig.height=3, fig.align="center"}
+
+set.seed(913)
+
+dfDefault  = Default
+dfDefault$default = factor(dfDefault$default)
+dfDefault$student = factor(dfDefault$student)
+  
+  ggplot(dfDefault, aes(balance, fill = default)) +
+  geom_histogram(binwidth = 500) +
+  facet_wrap(~student)
+
+
+dfDefault <- dfDefault %>% rownames_to_column("SampleID")
+xTrain <- sample_n(dfDefault, round(nrow(dfDefault)*.6))
+xTest <- dfDefault %>% anti_join(xTrain, by = "SampleID")
+  
+  
+```
+
+##  Comparison of Algorithms
+Use the follwing template that compares algorithms and then adds a SMOTE section and compares again. Follow this template, except use the Employee Turnover data.
+
+
+### Logistic Regression
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+glModS <- glm(default ~ student + balance + income, data = xTrain, family = binomial)
+glmPred <- predict(glModS, type = "response", newdata = xTest)
+xTest$GLM = if_else(glmPred < .5, "No", "Yes")
+
+CM = confusionMatrix(factor(xTest$GLM), factor(xTest$default),  positive = "Yes")
+
+Summary = data.frame(Algorithm = "GLM",
+                     Sensitivity = CM$byClass[1],
+                     Specificity = CM$byClass[2],
+                     PosPredVal =  CM$byClass[3],
+                     NegPredVal =  CM$byClass[4],
+                     Prevalence = CM$byClass[8])
+
+```
+
+### Linear Discriminant Analysis
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+lda.fit <- lda(default ~ student + balance + income, xTrain) 
+lda.pred <- predict(lda.fit, xTest)
+
+xTest$LDA =  lda.pred$class
+
+CM = confusionMatrix(xTest$LDA, factor(xTest$default),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "LDA",
+                     Sensitivity = CM$byClass[1],
+                     Specificity = CM$byClass[2],
+                     PosPredVal =  CM$byClass[3],
+                     NegPredVal =  CM$byClass[4],
+                     Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Naive Bayes
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+NBmodel <- naiveBayes(default ~ student + balance + income,  data = xTrain)
+xTest$NB <- predict(NBmodel, xTest, prob = TRUE)
+
+CM = confusionMatrix( xTest$NB, factor(xTest$default),  positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "NB",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Decision Tree
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+Treefit <- rpart(default ~ student + balance + income,  
+              data = xTrain,
+             method="class")
+
+xTest$Tree = predict(Treefit, type = "class", newdata = xTest)  # factor
+
+CM = confusionMatrix(xTest$Tree, factor(xTest$default),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "Tree",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Support Vector Machine
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+svmMod <- svm(default ~ student + balance + income, data = xTrain)
+xTest$SVM <- predict(svmMod, xTest)
+
+CM = confusionMatrix(xTest$SVM, factor(xTest$default), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "SVM",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+
+## SMOTE Sampling
+
+### Data Creation
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+smoteData <- SMOTE(default ~ student + balance + income, data = Default, perc.over = 350, perc.under=130) # SMOTE only works with factors
+prop.table(table(smoteData$default))
+
+
+
+```
+### Logistic Regression with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+glModSmote <- glm(default ~ student + balance + income, data = smoteData, family = binomial)
+glmPredSmote <- predict(glModSmote, type = "response", newdata = xTest)
+xTest$GLMSmote = if_else(glmPredSmote < .5, "No", "Yes")
+
+CM = confusionMatrix(factor(xTest$GLMSmote), factor(xTest$default),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "GLMSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### LDA with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+lda.fit <- lda(default ~ student + balance + income, smoteData) 
+lda.pred <- predict(lda.fit, xTest)
+
+xTest$LDASmote =  lda.pred$class
+
+CM = confusionMatrix(xTest$LDASmote,  factor(xTest$default), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "LDASmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Naive Bayes with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+model <- naiveBayes(default ~ student + balance + income,  data = smoteData)
+xTest$NBSmote <- predict(model, xTest, prob = TRUE)
+
+CM = confusionMatrix(xTest$NBSmote,  factor(xTest$default), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "NBSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Decision Tree with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+TreefitSmote <- rpart(default ~ student + balance + income,  
+              data = xTrain,
+             method="class")
+
+xTest$TreeSmote = predict(TreefitSmote, type = "class", newdata = xTest)  # factor
+
+CM = confusionMatrix( xTest$TreeSmote, factor(xTest$default),positive = "Yes")
+
+
+Summaryadd = data.frame(Algorithm = "TreeSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+
+### SVM with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+svmMod <- svm(default ~ student + balance + income, data = smoteData)
+xTest$SVMSmote <- predict(svmMod, xTest)
+
+CM = confusionMatrix(xTest$SVMSmote,  factor(xTest$default), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "SVMSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+
+```
+
+## Results and Review
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+knitr::kable(Summary) %>%
+  kable_styling(full_width = F, bootstrap_options = "striped", font_size = 9)
+
+```
+
