@@ -1,0 +1,926 @@
+Premium,Size,Home.Value,Credit,Exterior,Auto,Tier,Purchased
+4391,2384,214864,Excellent,Brick,N,Platinum,Yes
+3893,2103,200888,Excellent,Brick,N,Silver,Yes
+3889,1920,183182,Average,Brick,N,Green,Yes
+3881,1810,170088,Average,Brick,N,Green,Yes
+3869,1943,179480,Poor,Frame,Y,Green,Yes
+3863,2101,198842,Excellent,Brick,Y,Green,Yes
+3860,1954,175500,Poor,Frame,N,Silver,Yes
+3855,1901,179136,Below Average,Frame,N,Gold,Yes
+3854,2115,199390,Below Average,Brick,Y,Gold,Yes
+3851,1883,171153,Poor,Brick,N,Gold,Yes
+3844,2124,198694,Poor,Brick,N,Gold,Yes
+3838,2213,208276,Average,Brick,N,Platinum,Yes
+3829,1835,170983,Excellent,Brick,N,Platinum,Yes
+3828,2093,192415,Poor,Brick,Y,Silver,Yes
+3827,2109,197222,Below Average,Brick,N,Gold,Yes
+3823,2097,187084,Excellent,Brick,Y,Platinum,Yes
+3818,1912,179861,Average,Frame,N,Silver,Yes
+3817,2070,185404,Average,Brick,N,Platinum,Yes
+3816,2174,192662,Average,Brick,N,Silver,Yes
+3816,1880,168459,Average,Brick,N,Platinum,Yes
+3798,1816,171774,Average,Brick,N,Gold,Yes
+3798,1846,168103,Excellent,Frame,Y,Gold,Yes
+3795,2002,195621,Excellent,Brick,N,Platinum,Yes
+3794,1988,173341,Average,Frame,Y,Platinum,Yes
+3790,2189,193316,Poor,Brick,N,Silver,Yes
+3785,1915,179823,Average,Frame,N,Gold,Yes
+3776,2144,192125,Average,Brick,N,Silver,Yes
+3773,1807,168900,Average,Brick,N,Silver,Yes
+3767,2210,206966,Excellent,Brick,N,Platinum,Yes
+3767,2039,187525,Excellent,Brick,N,Gold,Yes
+3760,1820,168040,Poor,Brick,N,Green,Yes
+3757,2067,193040,Poor,Brick,N,Gold,Yes
+3757,1852,171404,Poor,Brick,Y,Platinum,Yes
+3753,1891,168354,Below Average,Brick,N,Silver,Yes
+3746,1944,174125,Below Average,Brick,N,Platinum,Yes
+3743,1923,177807,Poor,Frame,N,Silver,Yes
+3733,1994,180168,Good,Frame,N,Platinum,Yes
+3731,2082,192852,Below Average,Brick,Y,Silver,Yes
+3727,1888,170785,Below Average,Brick,N,Green,Yes
+3726,1877,170684,Good,Frame,N,Platinum,Yes
+3725,1964,175992,Average,Frame,N,Silver,Yes
+3705,1919,173480,Excellent,Brick,N,Gold,Yes
+3704,1976,179076,Below Average,Frame,Y,Platinum,Yes
+3703,2132,195232,Average,Brick,N,Gold,Yes
+3699,1951,181277,Below Average,Frame,N,Gold,Yes
+3698,1962,180596,Average,Brick,N,Gold,Yes
+3693,2017,188676,Below Average,Brick,N,Gold,Yes
+3679,2119,200026,Below Average,Brick,N,Platinum,Yes
+3669,2015,194720,Excellent,Brick,N,Platinum,Yes
+3665,2144,195458,Excellent,Brick,N,Platinum,Yes
+3661,1999,180556,Average,Brick,N,Gold,Yes
+3658,2039,197653,Average,Brick,N,Green,Yes
+3657,2053,193424,Average,Brick,N,Green,Yes
+3657,2070,188651,Average,Brick,Y,Gold,Yes
+3645,1935,177536,Good,Frame,N,Gold,Yes
+3639,1964,179930,Good,Frame,N,Green,Yes
+3618,1896,169677,Good,Brick,N,Platinum,Yes
+3616,2014,191995,Poor,Brick,N,Silver,Yes
+3615,1945,177241,Good,Frame,N,Gold,Yes
+3615,1899,171827,Below Average,Brick,N,Silver,Yes
+3608,1818,170215,Excellent,Brick,Y,Green,Yes
+3582,2067,185751,Average,Brick,N,Platinum,Yes
+3563,1874,171508,Average,Brick,N,Green,Yes
+3530,1915,181930,Average,Frame,N,Silver,Yes
+3527,1887,168008,Average,Brick,N,Gold,Yes
+3504,1881,169681,Excellent,Brick,N,Platinum,Yes
+3496,1895,171201,Excellent,Brick,N,Green,Yes
+3475,1805,169616,Below Average,Brick,N,Platinum,Yes
+3466,1833,168346,Average,Brick,N,Silver,Yes
+3463,2018,188401,Poor,Brick,Y,Silver,Yes
+3456,1883,171006,Excellent,Brick,N,Gold,Yes
+3428,1815,171956,Average,Brick,Y,Silver,Yes
+3426,1907,173833,Good,Frame,N,Platinum,Yes
+3424,1816,168089,Excellent,Brick,N,Platinum,Yes
+3412,1808,168384,Poor,Brick,N,Gold,Yes
+3397,1892,170048,Below Average,Brick,N,Gold,Yes
+3370,1819,171820,Good,Brick,N,Gold,Yes
+3289,1841,171457,Average,Brick,N,Platinum,Yes
+3207,1877,170403,Excellent,Brick,N,Platinum,Yes
+3200,1837,170065,Poor,Brick,N,Silver,Yes
+3179,1802,169033,Average,Brick,N,Platinum,Yes
+2962,1819,168129,Poor,Brick,N,Platinum,Yes
+2920,1816,169705,Good,Brick,Y,Platinum,Yes
+2549,1457,130414,Average,Frame,N,Silver,Yes
+2513,1393,119958,Average,Brick,N,Platinum,Yes
+2492,1628,151871,Average,Frame,N,Platinum,Yes
+2466,1601,156963,Excellent,Brick,N,Platinum,Yes
+2446,1417,130796,Poor,Frame,N,Platinum,Yes
+2443,1437,125605,Poor,Brick,N,Gold,Yes
+2433,1376,120653,Excellent,Brick,N,Green,Yes
+2412,1418,131552,Average,Frame,N,Platinum,Yes
+2394,1378,119012,Poor,Brick,N,Platinum,Yes
+2388,1658,156457,Poor,Brick,Y,Platinum,Yes
+2384,1422,130882,Below Average,Frame,N,Platinum,Yes
+2358,1379,120119,Poor,Brick,N,Platinum,Yes
+1966,1440,125032,Good,Brick,N,Silver,Yes
+1965,1378,122122,Average,Brick,N,Platinum,Yes
+1414,913,82086,Excellent,Stucco,N,Platinum,Yes
+3926,3115,282091,Below Average,Brick,N,Silver,No
+3448,2539,240758,Average,Brick,Y,Green,No
+3434,2485,236043,Average,Brick,N,Green,No
+3402,2506,243855,Average,Brick,N,Gold,No
+3274,2474,235909,Excellent,Brick,N,Green,No
+3238,2448,236684,Average,Brick,N,Silver,No
+3185,2458,236009,Good,Brick,N,Gold,No
+3149,2543,240269,Average,Brick,N,Gold,No
+3118,2370,223730,Good,Brick,N,Green,No
+3100,2384,216191,Excellent,Brick,N,Platinum,No
+3092,2496,235679,Average,Brick,N,Green,No
+3084,2512,240203,Poor,Brick,N,Platinum,No
+3055,2532,241311,Average,Brick,Y,Platinum,No
+3040,2456,235226,Excellent,Brick,N,Silver,No
+3038,2517,244696,Excellent,Brick,N,Silver,No
+3029,2528,241768,Below Average,Brick,N,Silver,No
+3001,2372,227370,Excellent,Brick,N,Gold,No
+2924,2536,243828,Below Average,Brick,N,Green,No
+2915,2543,242745,Below Average,Brick,N,Silver,No
+2889,2299,206333,Poor,Brick,N,Silver,No
+2861,2533,241796,Poor,Brick,N,Platinum,No
+2826,2359,210681,Poor,Brick,N,Silver,No
+2817,2518,241264,Poor,Brick,N,Gold,No
+2811,2242,205642,Excellent,Brick,N,Gold,No
+2804,2283,202003,Excellent,Brick,N,Silver,No
+2803,2434,235762,Poor,Brick,N,Platinum,No
+2784,2503,244488,Poor,Brick,N,Silver,No
+2783,2532,240125,Poor,Stucco,N,Green,No
+2775,2150,196482,Poor,Brick,N,Green,No
+2774,2430,235514,Excellent,Brick,N,Silver,No
+2773,2364,231418,Average,Brick,N,Platinum,No
+2758,2513,240896,Excellent,Brick,Y,Gold,No
+2755,2483,235709,Good,Brick,N,Silver,No
+2743,2487,235388,Poor,Brick,N,Platinum,No
+2743,2336,217732,Poor,Brick,N,Gold,No
+2722,2534,240732,Average,Brick,N,Platinum,No
+2717,2471,235497,Average,Brick,N,Platinum,No
+2707,2270,207554,Good,Brick,N,Silver,No
+2693,2386,214630,Average,Brick,Y,Platinum,No
+2682,2308,233867,Good,Brick,N,Green,No
+2671,2279,209411,Excellent,Brick,N,Platinum,No
+2667,2231,204706,Excellent,Brick,N,Gold,No
+2661,2234,205505,Good,Brick,N,Gold,No
+2626,1967,173861,Average,Frame,N,Green,No
+2625,2181,192589,Average,Brick,N,Gold,No
+2623,2365,237283,Average,Brick,N,Gold,No
+2622,2263,203777,Average,Brick,N,Gold,No
+2618,2411,239194,Poor,Stucco,Y,Silver,No
+2617,2533,242604,Excellent,Brick,N,Platinum,No
+2603,2210,208042,Average,Brick,N,Green,No
+2603,2221,204502,Average,Brick,N,Gold,No
+1751,1714,155768,Below Average,Frame,N,Platinum,No
+1731,1658,146478,Poor,Frame,N,Green,No
+1656,1719,160513,Below Average,Frame,N,Silver,No
+1611,1654,146868,Below Average,Frame,N,Silver,No
+1602,1580,134289,Average,Frame,N,Platinum,No
+1594,1767,155283,Good,Brick,Y,Silver,No
+1576,1602,146749,Average,Frame,N,Green,No
+1572,1763,162051,Average,Brick,N,Platinum,No
+1521,1690,147083,Average,Frame,N,Platinum,No
+1490,1432,129523,Below Average,Frame,N,Platinum,No
+1488,1315,118348,Average,Brick,N,Silver,No
+1476,1270,116627,Average,Brick,N,Gold,No
+1466,1334,119858,Excellent,Brick,N,Platinum,No
+1464,988,85450,Average,Frame,N,Silver,No
+1449,1291,113202,Excellent,Brick,N,Silver,No
+1425,1329,118114,Below Average,Brick,N,Gold,No
+1418,1231,110129,Average,Brick,N,Silver,No
+1416,1300,119612,Below Average,Brick,N,Platinum,No
+1403,1271,110796,Average,Brick,N,Platinum,No
+1330,1383,119123,Below Average,Brick,N,Platinum,No
+1312,1245,113554,Average,Brick,N,Green,No
+1284,1389,118028,Below Average,Brick,N,Platinum,No
+1215,1292,112794,Good,Brick,N,Platinum,No
+1106,994,81575,Average,Frame,N,Platinum,No
+1082,1125,93355,Below Average,Brick,N,Platinum,No
+1071,1286,114815,Excellent,Brick,N,Platinum,No
+1056,1350,118496,Below Average,Brick,N,Platinum,No
+1037,1283,109907,Average,Brick,N,Platinum,No
+1034,1330,119129,Below Average,Brick,N,Platinum,No
+1031,1261,111816,Average,Brick,N,Platinum,No
+1023,1286,108872,Excellent,Brick,N,Platinum,No
+1014,1267,112531,Poor,Brick,N,Platinum,No
+1009,1199,97251,Average,Brick,Y,Platinum,No
+1004,1351,119196,Poor,Brick,Y,Platinum,No
+4230,2632,256000,Average,Brick,N,Platinum,Yes
+3896,1924,173759,Below Average,Frame,N,Green,Yes
+3776,1967,182059,Below Average,Frame,N,Gold,Yes
+3750,2168,196901,Average,Brick,N,Silver,Yes
+3723,2139,194948,Average,Brick,N,Green,Yes
+3715,2207,208894,Below Average,Brick,N,Green,Yes
+3689,2186,196867,Average,Brick,Y,Gold,Yes
+3687,2079,196023,Poor,Brick,Y,Gold,Yes
+3684,2215,202509,Below Average,Brick,N,Silver,Yes
+3670,2212,201523,Below Average,Brick,N,Green,Yes
+3656,2232,200435,Average,Brick,N,Platinum,Yes
+3653,1976,175428,Excellent,Frame,Y,Gold,Yes
+3638,2094,195810,Below Average,Brick,N,Platinum,Yes
+3635,2209,200442,Good,Brick,N,Platinum,Yes
+3624,2173,194875,Good,Brick,N,Green,Yes
+3620,2132,194849,Good,Brick,N,Green,Yes
+3617,2150,196538,Excellent,Brick,N,Green,Yes
+3592,2185,197658,Excellent,Brick,Y,Green,Yes
+3591,2111,196926,Good,Brick,N,Green,Yes
+3587,1859,171561,Excellent,Brick,Y,Green,Yes
+3584,2202,205818,Average,Brick,N,Silver,Yes
+3568,2074,198994,Poor,Brick,N,Silver,Yes
+3544,2148,199867,Below Average,Brick,N,Gold,Yes
+3536,2107,200873,Excellent,Brick,Y,Gold,Yes
+3523,2111,198069,Average,Brick,N,Silver,Yes
+3519,2156,195530,Below Average,Brick,Y,Platinum,Yes
+3518,2149,200983,Average,Brick,N,Gold,Yes
+3516,1874,170404,Excellent,Brick,N,Gold,Yes
+3514,2079,188748,Average,Brick,Y,Green,Yes
+3492,2132,194289,Below Average,Brick,N,Gold,Yes
+3492,1879,170056,Below Average,Frame,N,Platinum,Yes
+3488,2164,196684,Average,Brick,N,Green,Yes
+3485,1984,182445,Excellent,Frame,N,Gold,Yes
+3481,2225,204327,Average,Brick,N,Gold,Yes
+3481,1975,183577,Excellent,Frame,Y,Gold,Yes
+3480,2191,199033,Poor,Brick,Y,Silver,Yes
+3477,2047,186243,Average,Brick,N,Green,Yes
+3476,2093,198318,Average,Brick,N,Green,Yes
+3468,2132,194120,Poor,Brick,N,Gold,Yes
+3457,1930,178763,Excellent,Frame,Y,Green,Yes
+3455,2055,189522,Excellent,Brick,N,Green,Yes
+3447,1948,180969,Below Average,Frame,N,Green,Yes
+3444,1975,183226,Average,Frame,Y,Green,Yes
+3437,2194,192758,Average,Brick,N,Gold,Yes
+3436,2159,195982,Excellent,Brick,N,Green,Yes
+3431,2428,239838,Excellent,Stucco,N,Platinum,Yes
+3430,2111,194781,Good,Brick,N,Silver,Yes
+3417,2253,208281,Excellent,Brick,Y,Platinum,Yes
+3417,1981,174677,Average,Frame,N,Gold,Yes
+3416,2112,192699,Poor,Brick,N,Silver,Yes
+3415,1956,179376,Average,Brick,N,Silver,Yes
+3406,2248,207105,Below Average,Brick,N,Platinum,Yes
+3402,2280,205718,Excellent,Brick,N,Platinum,Yes
+3401,2277,206141,Good,Brick,N,Gold,Yes
+3391,1959,177083,Average,Frame,N,Silver,Yes
+3391,1909,175091,Excellent,Frame,N,Silver,Yes
+3364,1943,174322,Average,Frame,Y,Platinum,Yes
+3357,1957,175891,Average,Frame,N,Platinum,Yes
+3337,2155,195335,Below Average,Brick,N,Gold,Yes
+3327,2019,195016,Excellent,Brick,N,Platinum,Yes
+3320,2018,193658,Excellent,Brick,N,Green,Yes
+3315,2131,199806,Excellent,Brick,N,Platinum,Yes
+3308,2058,191752,Average,Brick,Y,Gold,Yes
+3304,2044,197533,Excellent,Brick,N,Platinum,Yes
+3285,2455,238613,Poor,Stucco,N,Platinum,Yes
+3270,2125,193137,Below Average,Brick,N,Silver,Yes
+3267,2167,200832,Excellent,Brick,N,Silver,Yes
+3258,2013,191280,Average,Brick,N,Silver,Yes
+3257,1912,175443,Excellent,Frame,N,Silver,Yes
+3256,2224,208158,Average,Brick,N,Platinum,Yes
+3256,2011,194637,Excellent,Brick,N,Green,Yes
+3221,1894,168663,Below Average,Brick,N,Platinum,Yes
+3204,2062,195874,Below Average,Brick,N,Green,Yes
+3203,2071,195330,Excellent,Brick,N,Platinum,Yes
+3203,2111,192194,Average,Brick,N,Gold,Yes
+3178,2114,193718,Average,Brick,N,Gold,Yes
+3169,1859,168533,Poor,Brick,N,Silver,Yes
+3152,2034,189891,Below Average,Brick,Y,Green,Yes
+3148,1892,170449,Average,Brick,N,Silver,Yes
+3119,1931,181974,Good,Frame,N,Silver,Yes
+3115,1857,168578,Poor,Brick,N,Green,Yes
+3076,2139,200752,Excellent,Brick,N,Platinum,Yes
+3057,2062,185091,Average,Brick,N,Gold,Yes
+3049,1856,170629,Poor,Brick,Y,Platinum,Yes
+3035,2036,197813,Poor,Brick,N,Silver,Yes
+3019,2009,194603,Average,Brick,N,Gold,Yes
+3014,1841,169073,Excellent,Brick,N,Silver,Yes
+3011,1878,169428,Poor,Brick,N,Gold,Yes
+2930,1929,174150,Poor,Frame,N,Platinum,Yes
+2929,2074,193106,Poor,Brick,N,Platinum,Yes
+2912,1900,175042,Excellent,Frame,Y,Platinum,Yes
+2907,1892,171802,Excellent,Brick,Y,Gold,Yes
+2902,2402,238244,Excellent,Stucco,N,Platinum,Yes
+2901,1894,169628,Average,Brick,Y,Green,Yes
+2891,1920,173566,Average,Frame,N,Platinum,Yes
+2848,1850,170271,Average,Brick,N,Silver,Yes
+2824,1819,169419,Average,Brick,N,Platinum,Yes
+2818,2055,185476,Good,Brick,Y,Platinum,Yes
+2812,2023,196719,Average,Brick,Y,Platinum,Yes
+2731,1833,168567,Poor,Brick,Y,Platinum,Yes
+2711,2358,237729,Average,Stucco,N,Platinum,Yes
+2709,1820,170219,Below Average,Frame,Y,Platinum,Yes
+2682,1866,169651,Excellent,Brick,Y,Silver,Yes
+2599,1646,151091,Average,Frame,Y,Platinum,Yes
+2593,1553,131974,Average,Frame,N,Silver,Yes
+2591,1580,137952,Excellent,Frame,N,Platinum,Yes
+2588,1519,139834,Average,Frame,N,Platinum,Yes
+2586,1450,130215,Average,Frame,N,Silver,Yes
+2584,1714,162441,Below Average,Brick,N,Silver,Yes
+2583,1500,130249,Poor,Frame,Y,Silver,Yes
+2580,1404,129307,Below Average,Frame,N,Gold,Yes
+2575,1487,127222,Below Average,Frame,N,Platinum,Yes
+2572,1526,143223,Excellent,Frame,N,Green,Yes
+2571,1414,126948,Good,Frame,Y,Platinum,Yes
+2570,1421,125153,Excellent,Brick,N,Gold,Yes
+2562,1679,158956,Average,Brick,N,Silver,Yes
+2558,1394,120271,Poor,Brick,N,Platinum,Yes
+2550,1536,131576,Below Average,Frame,N,Green,Yes
+2545,1604,150568,Average,Frame,N,Silver,Yes
+2543,1455,126843,Average,Frame,N,Gold,Yes
+2537,1754,166648,Average,Brick,N,Silver,Yes
+2530,1445,131274,Poor,Frame,N,Platinum,Yes
+2519,1765,155087,Excellent,Brick,N,Platinum,Yes
+2518,1345,121939,Average,Brick,N,Silver,Yes
+2516,1557,141037,Average,Frame,N,Platinum,Yes
+2508,1422,128593,Excellent,Frame,N,Green,Yes
+2505,1714,154030,Average,Brick,Y,Silver,Yes
+2502,1753,164104,Average,Brick,N,Platinum,Yes
+2496,1766,160734,Average,Brick,N,Silver,Yes
+2494,1707,157936,Below Average,Brick,N,Platinum,Yes
+2486,1664,152939,Excellent,Frame,Y,Platinum,Yes
+2486,1364,119500,Average,Brick,N,Silver,Yes
+2482,1609,149179,Below Average,Frame,N,Silver,Yes
+2480,1345,118072,Excellent,Brick,N,Green,Yes
+2473,1398,119842,Excellent,Brick,N,Silver,Yes
+2472,1655,146871,Poor,Frame,N,Silver,Yes
+2467,1519,139642,Excellent,Frame,N,Platinum,Yes
+2463,1426,130778,Average,Frame,Y,Platinum,Yes
+2460,1410,131295,Good,Frame,Y,Platinum,Yes
+2458,1686,156043,Average,Brick,Y,Green,Yes
+2457,1753,158491,Poor,Brick,N,Silver,Yes
+2457,1369,121172,Average,Brick,Y,Green,Yes
+2454,1439,131499,Good,Frame,N,Green,Yes
+2452,1709,163844,Average,Brick,N,Platinum,Yes
+2452,1655,155446,Average,Brick,N,Gold,Yes
+2451,1540,137685,Good,Frame,N,Platinum,Yes
+2447,1677,151755,Poor,Frame,N,Platinum,Yes
+2444,1649,159871,Below Average,Brick,N,Gold,Yes
+2444,1744,157764,Below Average,Brick,N,Platinum,Yes
+2438,1781,166373,Average,Brick,N,Silver,Yes
+2431,1541,143191,Excellent,Frame,N,Gold,Yes
+2428,1545,140943,Average,Frame,N,Platinum,Yes
+2426,1685,161594,Average,Brick,N,Gold,Yes
+2421,1555,144649,Below Average,Frame,N,Green,Yes
+2421,1462,130755,Average,Frame,N,Gold,Yes
+2414,1513,133493,Good,Frame,N,Silver,Yes
+2408,1517,142405,Below Average,Frame,N,Silver,Yes
+2408,1351,119210,Below Average,Brick,Y,Platinum,Yes
+2405,1502,134856,Excellent,Frame,N,Platinum,Yes
+2392,1674,151860,Below Average,Frame,N,Gold,Yes
+2392,1543,139618,Average,Frame,N,Silver,Yes
+2389,1528,133165,Below Average,Frame,Y,Platinum,Yes
+2385,1400,118735,Excellent,Brick,Y,Silver,Yes
+2377,1852,169838,Good,Brick,N,Green,Yes
+2375,1759,163707,Excellent,Brick,Y,Gold,Yes
+2373,1745,154567,Excellent,Brick,N,Silver,Yes
+2372,1439,127569,Good,Frame,N,Gold,Yes
+2370,1463,127533,Average,Frame,N,Silver,Yes
+2361,1654,158015,Excellent,Brick,Y,Platinum,Yes
+2360,1476,127623,Excellent,Frame,Y,Silver,Yes
+2357,1610,145627,Excellent,Frame,N,Green,Yes
+2357,1448,128578,Average,Frame,Y,Platinum,Yes
+2355,1797,158451,Excellent,Brick,N,Platinum,Yes
+2345,1608,153085,Excellent,Frame,Y,Green,Yes
+2342,1445,127429,Average,Frame,N,Platinum,Yes
+2342,1491,126874,Average,Frame,N,Platinum,Yes
+2333,1680,151307,Average,Frame,N,Silver,Yes
+2331,1743,162460,Average,Brick,Y,Platinum,Yes
+2331,1490,130424,Excellent,Frame,N,Silver,Yes
+2326,1363,120664,Below Average,Brick,N,Platinum,Yes
+2324,1624,161684,Below Average,Brick,N,Silver,Yes
+2320,1780,152176,Poor,Brick,N,Platinum,Yes
+2317,1488,125960,Poor,Brick,N,Green,Yes
+2314,1613,156880,Poor,Brick,N,Platinum,Yes
+2312,1753,160745,Excellent,Brick,N,Platinum,Yes
+2310,1544,139376,Good,Frame,Y,Gold,Yes
+2310,1414,129941,Good,Frame,N,Silver,Yes
+2305,1569,142161,Poor,Frame,N,Platinum,Yes
+2301,1356,122819,Good,Brick,N,Platinum,Yes
+2293,1467,126713,Poor,Frame,N,Platinum,Yes
+2287,1421,131089,Below Average,Frame,N,Silver,Yes
+2284,1387,119361,Below Average,Brick,N,Silver,Yes
+2281,1411,127300,Average,Frame,Y,Silver,Yes
+2281,1355,122912,Average,Brick,N,Platinum,Yes
+2278,1557,133786,Average,Frame,N,Platinum,Yes
+2277,1443,126889,Average,Frame,N,Silver,Yes
+2274,1690,159698,Average,Brick,N,Silver,Yes
+2273,1399,121872,Excellent,Brick,N,Platinum,Yes
+2272,1418,129908,Below Average,Frame,N,Platinum,Yes
+2272,1444,126467,Average,Frame,N,Platinum,Yes
+2272,1497,126156,Below Average,Brick,N,Gold,Yes
+2269,1518,133828,Average,Frame,N,Green,Yes
+2268,1653,156498,Below Average,Brick,N,Silver,Yes
+2265,1501,143098,Excellent,Frame,N,Silver,Yes
+2262,1581,136762,Average,Frame,N,Silver,Yes
+2252,1632,155083,Average,Brick,Y,Platinum,Yes
+2242,1673,155199,Poor,Brick,Y,Platinum,Yes
+2241,1414,127970,Average,Frame,N,Silver,Yes
+2240,1502,144654,Average,Frame,N,Platinum,Yes
+2236,1395,121285,Poor,Brick,N,Silver,Yes
+2232,1424,125076,Average,Brick,N,Silver,Yes
+2232,1384,121137,Excellent,Brick,N,Silver,Yes
+2231,1519,132945,Good,Frame,N,Platinum,Yes
+2228,1408,129853,Average,Frame,N,Platinum,Yes
+2222,1485,131423,Excellent,Frame,N,Silver,Yes
+2219,1711,165304,Average,Brick,Y,Silver,Yes
+2219,1376,121533,Excellent,Brick,N,Silver,Yes
+2218,1482,131596,Below Average,Frame,Y,Silver,Yes
+2214,1632,159406,Average,Brick,Y,Gold,Yes
+2211,1656,154842,Excellent,Brick,Y,Green,Yes
+2210,1550,138980,Excellent,Frame,N,Platinum,Yes
+2199,1461,131731,Poor,Frame,N,Platinum,Yes
+2189,1611,161908,Average,Brick,Y,Silver,Yes
+2188,1424,125716,Excellent,Brick,N,Gold,Yes
+2182,1465,126052,Below Average,Brick,N,Platinum,Yes
+2177,1610,159305,Average,Brick,N,Platinum,Yes
+2167,1440,130268,Excellent,Frame,N,Gold,Yes
+2155,1698,161070,Excellent,Brick,N,Green,Yes
+2155,1393,121593,Poor,Brick,N,Platinum,Yes
+2154,1702,166171,Excellent,Brick,N,Green,Yes
+2142,1487,129877,Excellent,Frame,N,Platinum,Yes
+2137,1633,153538,Good,Brick,Y,Silver,Yes
+2118,1458,131989,Average,Frame,N,Platinum,Yes
+2099,1355,119777,Average,Brick,N,Platinum,Yes
+2097,1347,122251,Average,Brick,N,Silver,Yes
+2097,1376,118367,Below Average,Brick,N,Platinum,Yes
+2092,1347,120089,Good,Brick,Y,Green,Yes
+2084,1465,130031,Below Average,Frame,Y,Platinum,Yes
+2074,1397,122196,Poor,Brick,Y,Gold,Yes
+2060,1674,159192,Average,Brick,N,Platinum,Yes
+2049,1425,126538,Below Average,Frame,N,Platinum,Yes
+2037,1433,130399,Excellent,Frame,N,Silver,Yes
+2032,1683,158291,Average,Brick,Y,Platinum,Yes
+2030,1694,161333,Excellent,Brick,N,Platinum,Yes
+2022,1439,128805,Below Average,Frame,N,Platinum,Yes
+2021,1386,121950,Excellent,Brick,N,Platinum,Yes
+1998,1627,161096,Excellent,Brick,Y,Silver,Yes
+1996,1374,121911,Average,Brick,N,Platinum,Yes
+1991,1701,161951,Good,Brick,N,Platinum,Yes
+1987,1486,131877,Poor,Frame,Y,Platinum,Yes
+1976,1346,118493,Average,Brick,N,Platinum,Yes
+1971,1718,153185,Poor,Brick,N,Platinum,Yes
+1970,1434,128048,Average,Frame,N,Platinum,Yes
+1962,1369,120138,Good,Brick,N,Silver,Yes
+1958,1504,134752,Below Average,Frame,N,Silver,Yes
+1957,1465,128499,Average,Frame,Y,Platinum,Yes
+1950,1354,120419,Good,Brick,N,Silver,Yes
+1927,1652,154463,Average,Brick,N,Platinum,Yes
+1910,1441,130480,Excellent,Brick,Y,Silver,Yes
+1908,1356,120492,Below Average,Brick,N,Platinum,Yes
+1906,1362,120649,Average,Brick,N,Platinum,Yes
+1900,1709,167859,Excellent,Brick,N,Platinum,Yes
+1895,1551,141242,Excellent,Frame,N,Green,Yes
+1894,1522,138586,Good,Frame,N,Silver,Yes
+1881,1661,159421,Good,Brick,N,Silver,Yes
+1880,1355,122223,Excellent,Brick,N,Platinum,Yes
+1877,1640,156055,Average,Brick,N,Silver,Yes
+1870,1717,165647,Excellent,Brick,N,Platinum,Yes
+1870,1423,126107,Poor,Brick,N,Platinum,Yes
+1865,1548,142120,Poor,Frame,N,Silver,Yes
+1858,1703,160110,Average,Brick,N,Platinum,Yes
+1858,1476,126785,Average,Frame,N,Platinum,Yes
+1856,1609,157294,Below Average,Brick,N,Platinum,Yes
+1855,1375,120704,Poor,Brick,N,Silver,Yes
+1852,1678,153504,Average,Brick,Y,Platinum,Yes
+1847,1601,160631,Average,Brick,Y,Silver,Yes
+1845,1710,158064,Good,Brick,N,Platinum,Yes
+1826,1658,156411,Excellent,Brick,N,Silver,Yes
+1825,1453,130815,Average,Frame,Y,Platinum,Yes
+1814,1371,121347,Average,Brick,N,Silver,Yes
+1793,1412,131991,Excellent,Frame,N,Platinum,Yes
+1791,1697,157555,Good,Brick,N,Platinum,Yes
+1790,1423,129308,Good,Frame,Y,Platinum,Yes
+1789,1350,120613,Average,Brick,Y,Gold,Yes
+1786,1539,138754,Average,Frame,Y,Silver,Yes
+1781,1410,129614,Good,Frame,N,Silver,Yes
+1775,1650,160817,Poor,Brick,N,Silver,Yes
+1773,1499,125608,Poor,Brick,N,Platinum,Yes
+1765,1437,129712,Good,Frame,Y,Silver,Yes
+1757,1461,126705,Excellent,Frame,N,Silver,Yes
+1741,1409,128394,Excellent,Frame,N,Platinum,Yes
+1729,1412,129636,Good,Frame,N,Platinum,Yes
+1724,1362,120273,Average,Brick,N,Silver,Yes
+1717,1510,134826,Poor,Frame,N,Platinum,Yes
+1706,1628,161234,Poor,Brick,N,Platinum,Yes
+1693,1718,156119,Excellent,Brick,N,Platinum,Yes
+1692,1386,119378,Poor,Brick,N,Platinum,Yes
+1687,1360,118570,Poor,Brick,N,Platinum,Yes
+1664,1516,139457,Average,Frame,N,Platinum,Yes
+1657,1439,128293,Poor,Frame,N,Silver,Yes
+1650,1431,125574,Average,Brick,N,Platinum,Yes
+1649,1634,159270,Average,Brick,Y,Platinum,Yes
+1648,1389,120722,Excellent,Brick,N,Platinum,Yes
+1646,1410,130285,Good,Brick,Y,Platinum,Yes
+1644,1455,130741,Excellent,Frame,N,Platinum,Yes
+1639,1456,127719,Excellent,Frame,N,Platinum,Yes
+1636,1408,131160,Good,Frame,N,Platinum,Yes
+1621,1361,120567,Average,Brick,N,Silver,Yes
+1611,1620,160974,Average,Brick,N,Silver,Yes
+1596,1407,129876,Average,Frame,N,Platinum,Yes
+1552,1392,120923,Excellent,Brick,N,Platinum,Yes
+1516,1347,120282,Good,Brick,N,Platinum,Yes
+1485,1016,94956,Poor,Brick,N,Platinum,Yes
+1418,835,75893,Average,Frame,N,Platinum,Yes
+1411,878,73550,Below Average,Brick,N,Platinum,Yes
+1405,911,84718,Poor,Frame,N,Platinum,Yes
+1398,974,80385,Below Average,Frame,N,Platinum,Yes
+1378,990,82669,Average,Stucco,N,Gold,Yes
+1373,1068,90050,Below Average,Brick,N,Platinum,Yes
+1360,846,75523,Average,Brick,N,Platinum,Yes
+1351,868,74592,Excellent,Brick,N,Platinum,Yes
+1350,1109,106268,Poor,Brick,N,Platinum,Yes
+1347,1121,97104,Poor,Brick,N,Platinum,Yes
+1342,1004,95468,Poor,Brick,Y,Platinum,Yes
+1338,1120,105923,Poor,Brick,N,Platinum,Yes
+1322,1016,90086,Excellent,Brick,Y,Silver,Yes
+1321,835,73563,Average,Brick,N,Silver,Yes
+1319,992,82402,Good,Stucco,Y,Platinum,Yes
+1300,864,75022,Average,Brick,N,Platinum,Yes
+1296,869,75271,Poor,Brick,N,Platinum,Yes
+1286,934,85604,Average,Brick,N,Silver,Yes
+1263,1060,92579,Poor,Brick,N,Platinum,Yes
+1221,1017,90415,Average,Brick,N,Platinum,Yes
+1209,925,85975,Average,Brick,N,Platinum,Yes
+1203,1089,94656,Excellent,Brick,N,Platinum,Yes
+1180,976,82543,Average,Stucco,N,Platinum,Yes
+1138,957,82354,Excellent,Stucco,Y,Platinum,Yes
+1008,984,81913,Below Average,Stucco,N,Platinum,Yes
+4303,3066,283453,Excellent,Brick,N,Gold,No
+4056,2788,268912,Average,Brick,N,Platinum,No
+4051,2847,265000,Good,Brick,N,Green,No
+3464,2193,198691,Good,Brick,N,Green,No
+3448,2450,236586,Average,Brick,N,Platinum,No
+3444,2348,231469,Poor,Brick,Y,Silver,No
+3431,2196,192388,Poor,Brick,Y,Green,No
+3407,2273,209966,Average,Brick,N,Green,No
+3387,2339,211058,Average,Brick,Y,Green,No
+3385,2392,233161,Good,Brick,N,Gold,No
+3369,2274,201864,Poor,Brick,N,Silver,No
+3365,2479,237029,Average,Brick,Y,Platinum,No
+3363,2386,232379,Average,Brick,Y,Green,No
+3349,2215,205285,Below Average,Brick,N,Gold,No
+3324,2388,212841,Below Average,Brick,N,Silver,No
+3323,2491,237616,Excellent,Brick,N,Platinum,No
+3311,2338,212748,Average,Brick,Y,Platinum,No
+3287,2097,189348,Good,Brick,Y,Green,No
+3280,2260,206101,Below Average,Brick,N,Platinum,No
+3270,2452,239742,Below Average,Stucco,N,Green,No
+3263,2100,199672,Poor,Brick,N,Gold,No
+3261,2420,237718,Poor,Brick,N,Platinum,No
+3247,2355,237309,Excellent,Brick,N,Gold,No
+3231,2256,201783,Excellent,Brick,N,Gold,No
+3231,2141,192717,Excellent,Brick,Y,Gold,No
+3227,1995,176095,Average,Frame,Y,Platinum,No
+3216,2290,205777,Good,Brick,N,Green,No
+3198,2472,239507,Below Average,Stucco,N,Platinum,No
+3198,2441,235089,Average,Brick,N,Platinum,No
+3195,2364,234734,Good,Brick,N,Platinum,No
+3188,2046,189639,Good,Brick,N,Green,No
+3178,2425,238974,Average,Stucco,N,Gold,No
+3178,2279,207421,Excellent,Brick,N,Gold,No
+3175,2523,242599,Average,Brick,N,Platinum,No
+3163,2325,230500,Average,Brick,Y,Gold,No
+3156,2152,196542,Average,Brick,N,Green,No
+3149,2221,208964,Excellent,Brick,N,Platinum,No
+3114,2390,219362,Average,Brick,N,Silver,No
+3091,2049,189573,Excellent,Brick,N,Green,No
+3091,2007,187346,Excellent,Brick,N,Green,No
+3074,2383,231841,Average,Brick,N,Gold,No
+3073,2218,202778,Average,Brick,N,Platinum,No
+3065,2128,194917,Good,Brick,N,Green,No
+3062,2024,186542,Below Average,Brick,N,Gold,No
+3060,2206,206652,Below Average,Brick,N,Gold,No
+3055,1838,169545,Excellent,Frame,N,Platinum,No
+3049,2426,235749,Excellent,Brick,N,Silver,No
+3048,2265,203255,Below Average,Brick,Y,Silver,No
+3046,2385,214652,Average,Brick,N,Gold,No
+3038,2332,214492,Excellent,Brick,Y,Platinum,No
+3021,1958,183604,Poor,Frame,N,Platinum,No
+3020,2300,210191,Excellent,Brick,Y,Gold,No
+3016,2332,211010,Poor,Brick,N,Silver,No
+3012,2030,188528,Excellent,Brick,N,Green,No
+3011,2443,236526,Excellent,Brick,N,Gold,No
+2999,2447,238188,Below Average,Stucco,N,Green,No
+2996,2238,202359,Poor,Brick,N,Platinum,No
+2991,2420,239764,Good,Stucco,Y,Silver,No
+2991,2465,235121,Good,Brick,Y,Platinum,No
+2991,2281,206097,Poor,Brick,N,Silver,No
+2989,2217,202373,Average,Brick,N,Silver,No
+2971,2304,236826,Below Average,Brick,N,Green,No
+2934,2134,195074,Good,Brick,N,Gold,No
+2931,1941,177863,Below Average,Frame,N,Silver,No
+2926,2152,192853,Good,Brick,Y,Green,No
+2922,2449,238275,Poor,Stucco,Y,Silver,No
+2882,2413,238516,Excellent,Stucco,N,Platinum,No
+2875,2116,196520,Excellent,Brick,N,Green,No
+2872,2171,198452,Average,Brick,N,Gold,No
+2871,2036,187726,Excellent,Brick,N,Green,No
+2865,2038,197137,Average,Brick,N,Green,No
+2864,1907,175832,Excellent,Frame,N,Platinum,No
+2859,2161,197812,Average,Brick,N,Green,No
+2846,2362,222876,Poor,Brick,N,Platinum,No
+2846,2186,196915,Poor,Brick,N,Green,No
+2840,2449,239751,Excellent,Stucco,N,Platinum,No
+2832,2379,214204,Good,Brick,N,Silver,No
+2827,2498,239108,Excellent,Stucco,Y,Platinum,No
+2816,2129,192321,Poor,Brick,N,Gold,No
+2811,2014,194468,Below Average,Brick,Y,Gold,No
+2809,2043,187615,Good,Brick,Y,Gold,No
+2793,2148,192946,Excellent,Brick,N,Green,No
+2786,2032,187691,Poor,Brick,N,Gold,No
+2783,1944,183902,Average,Frame,N,Platinum,No
+2775,1952,179642,Poor,Frame,N,Green,No
+2774,2210,204245,Average,Brick,N,Gold,No
+2756,1905,177332,Good,Frame,N,Platinum,No
+2751,2081,197505,Below Average,Brick,N,Silver,No
+2737,2063,191259,Poor,Brick,Y,Gold,No
+2736,1988,173965,Below Average,Frame,N,Gold,No
+2730,1977,178270,Poor,Frame,N,Silver,No
+2727,2054,185584,Excellent,Brick,Y,Gold,No
+2700,2187,192732,Average,Brick,N,Platinum,No
+2696,2172,195941,Below Average,Brick,N,Platinum,No
+2680,2188,195629,Excellent,Brick,N,Gold,No
+2646,2084,193247,Average,Brick,N,Platinum,No
+2645,1875,171393,Below Average,Brick,N,Platinum,No
+2642,2177,196741,Excellent,Brick,N,Gold,No
+2638,2104,192535,Excellent,Brick,N,Gold,No
+2631,1988,175706,Average,Frame,N,Platinum,No
+2614,2025,196862,Below Average,Brick,N,Gold,No
+2561,1653,147917,Average,Frame,Y,Platinum,No
+2551,1700,160919,Average,Frame,N,Platinum,No
+2532,1696,148037,Average,Frame,N,Platinum,No
+2515,1671,148145,Poor,Frame,Y,Silver,No
+2503,1774,162323,Average,Brick,N,Gold,No
+2400,1581,131171,Poor,Frame,N,Green,No
+2372,1743,162080,Poor,Frame,N,Gold,No
+2365,1660,151915,Average,Frame,N,Silver,No
+2329,1660,150560,Average,Frame,N,Platinum,No
+2315,1600,153056,Below Average,Frame,N,Green,No
+2305,1716,158403,Poor,Brick,N,Green,No
+2301,1763,152186,Average,Brick,Y,Platinum,No
+2292,1662,152533,Excellent,Frame,N,Platinum,No
+2289,1569,141957,Excellent,Frame,N,Platinum,No
+2268,1583,133170,Poor,Frame,Y,Green,No
+2266,1703,160149,Average,Brick,N,Platinum,No
+2263,1571,131927,Below Average,Frame,N,Green,No
+2237,1695,151343,Average,Frame,N,Gold,No
+2237,1542,142385,Excellent,Frame,Y,Gold,No
+2228,1699,147728,Excellent,Frame,N,Gold,No
+2218,1738,157650,Excellent,Brick,N,Silver,No
+2204,1484,130996,Excellent,Frame,N,Green,No
+2195,1677,147915,Below Average,Frame,Y,Platinum,No
+2178,1708,163094,Below Average,Brick,N,Gold,No
+2177,1628,148869,Average,Frame,N,Gold,No
+2175,1752,166776,Excellent,Brick,N,Green,No
+2172,1533,134256,Average,Frame,N,Silver,No
+2162,1553,136305,Below Average,Frame,N,Gold,No
+2161,1682,152104,Average,Frame,N,Gold,No
+2160,1775,161768,Good,Brick,N,Green,No
+2154,1553,133065,Average,Frame,Y,Platinum,No
+2151,1669,149654,Poor,Frame,N,Platinum,No
+2148,1393,119836,Excellent,Brick,N,Silver,No
+2145,1760,167179,Average,Brick,Y,Silver,No
+2140,1566,142766,Excellent,Frame,N,Gold,No
+2138,1604,152928,Poor,Frame,N,Platinum,No
+2137,1568,143222,Excellent,Frame,N,Gold,No
+2132,1427,126373,Below Average,Frame,N,Green,No
+2131,1503,139400,Average,Frame,N,Green,No
+2127,1532,138850,Excellent,Frame,N,Platinum,No
+2116,1553,135374,Average,Frame,N,Silver,No
+2109,1643,151966,Excellent,Frame,N,Gold,No
+2108,1765,154275,Average,Brick,Y,Gold,No
+2104,1539,133448,Excellent,Frame,N,Gold,No
+2102,1521,133897,Excellent,Frame,N,Platinum,No
+2079,1663,146184,Average,Frame,N,Platinum,No
+2077,1497,127054,Below Average,Frame,N,Silver,No
+2074,1598,144307,Excellent,Frame,N,Green,No
+2069,1663,148793,Average,Frame,N,Silver,No
+2061,1679,155401,Below Average,Brick,N,Green,No
+2059,1760,156417,Average,Frame,N,Silver,No
+2057,1735,158358,Average,Brick,N,Silver,No
+2056,1529,131734,Average,Frame,N,Silver,No
+2056,1382,119411,Poor,Brick,N,Silver,No
+2048,1755,164050,Average,Brick,N,Silver,No
+2047,1412,126781,Below Average,Frame,N,Gold,No
+2046,1738,160552,Average,Brick,Y,Platinum,No
+2044,1702,158812,Below Average,Brick,N,Silver,No
+2038,1720,165753,Poor,Brick,N,Silver,No
+2037,1707,153494,Below Average,Brick,N,Platinum,No
+2029,1726,156844,Average,Brick,N,Platinum,No
+2023,1734,165703,Average,Brick,N,Gold,No
+2022,1551,131917,Good,Frame,N,Silver,No
+2019,1540,139041,Average,Frame,N,Silver,No
+2018,1345,122182,Excellent,Brick,Y,Platinum,No
+2012,1682,152559,Excellent,Frame,N,Platinum,No
+2009,1542,143797,Average,Frame,N,Green,No
+2007,1569,138656,Excellent,Frame,N,Platinum,No
+2006,1800,170302,Excellent,Brick,N,Platinum,No
+2006,1709,162193,Poor,Brick,N,Silver,No
+1995,1584,138257,Below Average,Frame,N,Gold,No
+1993,1783,158333,Average,Brick,Y,Platinum,No
+1991,1797,166592,Below Average,Brick,N,Platinum,No
+1991,1737,153061,Average,Brick,N,Gold,No
+1990,1742,165376,Average,Brick,N,Silver,No
+1982,1541,134221,Good,Frame,Y,Gold,No
+1980,1641,152715,Average,Frame,N,Platinum,No
+1975,1566,144193,Average,Frame,N,Gold,No
+1961,1589,141474,Poor,Frame,N,Green,No
+1959,1729,156301,Below Average,Brick,N,Silver,No
+1957,1746,152699,Good,Brick,N,Platinum,No
+1957,1509,139063,Excellent,Frame,N,Platinum,No
+1955,1646,146618,Excellent,Frame,N,Silver,No
+1953,1632,152886,Good,Frame,N,Silver,No
+1950,1423,129069,Poor,Frame,N,Silver,No
+1948,1571,136827,Average,Frame,N,Silver,No
+1946,1793,164693,Below Average,Brick,N,Green,No
+1937,1445,128830,Average,Frame,Y,Green,No
+1933,1446,126662,Average,Frame,N,Gold,No
+1920,1627,147700,Poor,Frame,Y,Green,No
+1919,1718,153320,Average,Brick,N,Gold,No
+1918,1595,137950,Below Average,Frame,N,Gold,No
+1918,1509,136843,Excellent,Frame,N,Silver,No
+1917,1655,148669,Average,Frame,N,Platinum,No
+1908,1473,131816,Good,Frame,N,Gold,No
+1901,1454,127072,Poor,Frame,N,Silver,No
+1899,1795,162874,Poor,Brick,N,Platinum,No
+1894,1722,155719,Below Average,Brick,N,Platinum,No
+1893,1722,155618,Average,Brick,Y,Platinum,No
+1888,1648,149352,Good,Frame,N,Platinum,No
+1886,1644,145867,Excellent,Frame,N,Silver,No
+1883,1777,154484,Poor,Brick,N,Gold,No
+1881,1683,148796,Excellent,Frame,N,Platinum,No
+1874,1649,152689,Average,Frame,N,Silver,No
+1871,1566,132375,Average,Frame,N,Platinum,No
+1864,1468,127150,Average,Frame,N,Green,No
+1859,1352,118064,Average,Brick,N,Gold,No
+1856,1473,128603,Excellent,Frame,N,Platinum,No
+1855,1510,140771,Poor,Frame,N,Platinum,No
+1853,1708,160836,Below Average,Brick,N,Platinum,No
+1852,1711,153783,Below Average,Brick,N,Platinum,No
+1852,1760,152622,Average,Brick,N,Platinum,No
+1851,1798,159765,Average,Brick,N,Platinum,No
+1850,1534,139671,Average,Frame,Y,Silver,No
+1845,1654,159574,Average,Brick,Y,Silver,No
+1842,1523,144021,Below Average,Frame,N,Platinum,No
+1838,1545,134927,Average,Frame,N,Platinum,No
+1830,1766,165650,Excellent,Brick,N,Silver,No
+1824,1657,149610,Good,Frame,N,Silver,No
+1819,1595,139598,Average,Frame,N,Platinum,No
+1816,1698,148476,Average,Frame,N,Platinum,No
+1816,1552,141453,Excellent,Frame,N,Platinum,No
+1815,1475,129686,Below Average,Frame,N,Silver,No
+1813,1796,152430,Poor,Brick,N,Silver,No
+1802,1510,137100,Excellent,Frame,N,Gold,No
+1793,1681,146950,Excellent,Frame,N,Gold,No
+1789,1561,134249,Poor,Frame,N,Platinum,No
+1789,1443,129410,Good,Frame,Y,Silver,No
+1788,1564,141675,Below Average,Frame,N,Silver,No
+1785,1579,139855,Average,Frame,Y,Gold,No
+1779,1762,160483,Below Average,Brick,N,Platinum,No
+1779,1608,145648,Excellent,Frame,N,Platinum,No
+1779,1399,118903,Average,Brick,N,Silver,No
+1770,1450,130321,Average,Frame,N,Platinum,No
+1769,1401,127284,Good,Frame,Y,Silver,No
+1751,1550,144218,Excellent,Frame,Y,Gold,No
+1748,1770,157640,Excellent,Brick,N,Platinum,No
+1713,1575,135516,Excellent,Frame,N,Silver,No
+1706,1654,149141,Excellent,Frame,N,Platinum,No
+1704,1583,133569,Poor,Frame,Y,Silver,No
+1695,1617,149549,Good,Frame,N,Platinum,No
+1684,1749,160976,Good,Brick,N,Platinum,No
+1684,1671,152869,Excellent,Frame,N,Platinum,No
+1678,1410,128956,Average,Frame,Y,Silver,No
+1676,1674,149958,Average,Frame,Y,Silver,No
+1672,1697,147926,Average,Frame,N,Platinum,No
+1670,1682,161239,Excellent,Brick,N,Silver,No
+1668,1525,143462,Below Average,Frame,N,Silver,No
+1667,1578,132329,Average,Frame,Y,Platinum,No
+1664,1609,150346,Good,Frame,N,Platinum,No
+1662,1719,165490,Good,Brick,N,Platinum,No
+1658,1505,144646,Poor,Frame,N,Platinum,No
+1658,1438,126970,Average,Frame,N,Platinum,No
+1652,1504,139620,Below Average,Frame,N,Platinum,No
+1641,1420,127157,Poor,Frame,N,Platinum,No
+1639,1670,153737,Poor,Brick,Y,Silver,No
+1635,1782,167291,Below Average,Brick,N,Platinum,No
+1635,1769,166066,Average,Brick,N,Silver,No
+1634,1562,133319,Average,Frame,N,Silver,No
+1624,1572,140955,Average,Frame,N,Silver,No
+1624,1564,132512,Excellent,Frame,N,Silver,No
+1623,1552,133881,Excellent,Frame,N,Platinum,No
+1618,1597,143721,Excellent,Frame,Y,Platinum,No
+1615,1741,165544,Excellent,Brick,N,Platinum,No
+1612,1402,131507,Average,Frame,Y,Platinum,No
+1611,1463,130665,Poor,Frame,Y,Platinum,No
+1608,1552,134684,Excellent,Frame,N,Green,No
+1603,1615,154097,Excellent,Brick,N,Platinum,No
+1596,1397,119384,Average,Brick,Y,Platinum,No
+1595,1758,154789,Excellent,Brick,N,Platinum,No
+1593,1406,127522,Excellent,Frame,Y,Platinum,No
+1582,1381,120559,Poor,Brick,N,Platinum,No
+1569,1440,128194,Excellent,Frame,Y,Platinum,No
+1568,1426,125641,Average,Brick,Y,Platinum,No
+1567,1357,118200,Average,Brick,Y,Platinum,No
+1558,1494,125126,Good,Brick,Y,Platinum,No
+1557,1583,144491,Excellent,Frame,N,Platinum,No
+1550,1420,127382,Poor,Frame,N,Platinum,No
+1543,1402,129541,Excellent,Frame,N,Platinum,No
+1543,1434,127224,Average,Frame,N,Platinum,No
+1542,1605,146157,Good,Frame,N,Silver,No
+1538,1406,131353,Below Average,Frame,N,Platinum,No
+1531,1523,136408,Good,Frame,N,Silver,No
+1523,1434,127970,Poor,Frame,N,Platinum,No
+1515,1474,128515,Below Average,Frame,N,Platinum,No
+1510,1388,121110,Below Average,Brick,N,Platinum,No
+1496,1238,113191,Poor,Brick,Y,Gold,No
+1495,1124,99843,Average,Brick,N,Gold,No
+1492,1062,94986,Poor,Brick,Y,Platinum,No
+1481,1242,112644,Excellent,Brick,N,Silver,No
+1477,851,74798,Poor,Brick,Y,Green,No
+1469,1290,111948,Below Average,Brick,Y,Platinum,No
+1468,1401,130960,Excellent,Frame,Y,Platinum,No
+1466,955,83047,Excellent,Frame,N,Platinum,No
+1460,1147,101645,Excellent,Brick,N,Platinum,No
+1458,1316,118962,Poor,Brick,N,Platinum,No
+1456,1337,122665,Average,Brick,Y,Platinum,No
+1455,1193,102875,Excellent,Brick,N,Platinum,No
+1447,1085,92803,Poor,Brick,Y,Platinum,No
+1443,1161,101628,Excellent,Brick,N,Platinum,No
+1437,1197,102597,Average,Brick,N,Silver,No
+1436,1091,93980,Below Average,Brick,Y,Platinum,No
+1433,1233,116911,Average,Brick,N,Platinum,No
+1433,1073,94960,Poor,Brick,N,Platinum,No
+1424,1332,120823,Average,Brick,N,Silver,No
+1424,847,75639,Excellent,Brick,N,Green,No
+1423,1160,101063,Poor,Brick,N,Silver,No
+1421,1181,105688,Average,Brick,N,Platinum,No
+1419,1211,111955,Poor,Brick,N,Platinum,No
+1418,1006,90889,Excellent,Brick,N,Platinum,No
+1415,987,81649,Excellent,Frame,N,Platinum,No
+1411,903,80628,Average,Frame,N,Platinum,No
+1410,1252,117338,Below Average,Brick,N,Platinum,No
+1408,1437,126219,Excellent,Frame,Y,Platinum,No
+1405,902,83632,Excellent,Frame,N,Gold,No
+1397,1121,108670,Excellent,Brick,Y,Platinum,No
+1397,1155,93746,Good,Brick,Y,Platinum,No
+1396,1143,100484,Average,Brick,N,Platinum,No
+1395,1114,103836,Good,Brick,Y,Platinum,No
+1395,920,83561,Excellent,Frame,N,Silver,No
+1392,1332,120860,Good,Brick,N,Platinum,No
+1389,1308,120432,Poor,Brick,N,Silver,No
+1386,1081,90381,Average,Brick,N,Platinum,No
+1381,1044,94423,Average,Brick,Y,Platinum,No
+1380,1017,92945,Good,Brick,N,Platinum,No
+1377,1104,102995,Good,Brick,N,Gold,No
+1372,1315,119907,Average,Brick,N,Platinum,No
+1369,1252,113883,Average,Brick,N,Gold,No
+1369,1198,92403,Below Average,Brick,N,Platinum,No
+1367,1216,117288,Excellent,Brick,N,Platinum,No
+1364,1174,99417,Excellent,Brick,N,Platinum,No
+1363,1309,122244,Poor,Brick,N,Silver,No
+1361,1242,113310,Average,Brick,Y,Silver,No
+1360,987,84201,Average,Frame,N,Platinum,No
+1359,1150,100187,Excellent,Brick,N,Green,No
+1353,911,81572,Below Average,Frame,Y,Platinum,No
+1348,1096,92096,Excellent,Brick,N,Platinum,No
+1346,1212,115302,Excellent,Brick,N,Gold,No
+1345,1234,108576,Excellent,Brick,Y,Silver,No
+1338,987,84865,Poor,Frame,N,Platinum,No
+1335,1238,114053,Excellent,Brick,N,Platinum,No
+1326,1341,122367,Average,Brick,Y,Silver,No
+1324,1365,120034,Good,Brick,N,Platinum,No
+1322,1024,95120,Average,Brick,Y,Platinum,No
+1304,1201,109226,Good,Brick,N,Platinum,No
+1297,1076,93198,Good,Brick,N,Platinum,No
+1292,1307,121080,Average,Brick,N,Platinum,No
+1290,1079,91086,Average,Brick,N,Platinum,No
+1288,1072,92451,Poor,Brick,Y,Silver,No
+1288,987,80117,Average,Frame,N,Platinum,No
+1286,1165,107379,Average,Brick,N,Platinum,No
+1284,1198,107060,Excellent,Brick,N,Platinum,No
+1281,1377,121826,Good,Brick,N,Silver,No
+1268,1002,90224,Below Average,Brick,N,Platinum,No
+1264,1208,113568,Excellent,Brick,N,Platinum,No
+1258,882,75817,Average,Frame,N,Silver,No
+1256,1074,94827,Average,Brick,N,Platinum,No
+1254,1058,95708,Excellent,Brick,Y,Platinum,No
+1253,1195,103649,Average,Brick,N,Platinum,No
+1252,931,81524,Below Average,Frame,N,Platinum,No
+1251,1121,99084,Poor,Brick,N,Platinum,No
+1246,1314,118255,Good,Brick,Y,Platinum,No
+1245,847,73191,Average,Frame,N,Platinum,No
+1244,1238,111510,Excellent,Brick,Y,Silver,No
+1243,958,83599,Average,Frame,Y,Platinum,No
+1241,1179,94175,Average,Brick,N,Silver,No
+1232,878,76387,Excellent,Frame,N,Platinum,No
+1231,1171,97328,Good,Brick,N,Platinum,No
+1231,963,83623,Poor,Frame,Y,Platinum,No
+1229,1395,121216,Poor,Brick,N,Platinum,No
+1229,908,84719,Excellent,Frame,Y,Green,No
+1226,991,84916,Below Average,Frame,Y,Platinum,No
+1213,1276,118160,Excellent,Brick,Y,Platinum,No
+1209,1189,107312,Excellent,Brick,N,Platinum,No
+1203,1305,121906,Average,Brick,N,Platinum,No
+1201,1173,98147,Good,Brick,N,Platinum,No
+1193,1129,108782,Poor,Brick,N,Platinum,No
+1190,1235,111243,Poor,Brick,N,Platinum,No
+1190,994,83339,Excellent,Frame,Y,Gold,No
+1173,1232,108960,Excellent,Brick,Y,Platinum,No
+1168,988,83365,Average,Frame,N,Platinum,No
+1163,1230,115362,Poor,Brick,N,Platinum,No
+1157,962,81783,Average,Frame,N,Gold,No
+1154,1178,104050,Average,Brick,N,Platinum,No
+1153,1104,99636,Good,Brick,Y,Platinum,No
+1153,1055,91647,Excellent,Brick,N,Silver,No
+1140,1377,120076,Good,Brick,N,Platinum,No
+1135,1271,117711,Average,Brick,Y,Platinum,No
+1128,1292,121016,Average,Brick,N,Silver,No
+1122,1110,102228,Average,Brick,N,Platinum,No
+1092,973,82858,Poor,Stucco,N,Gold,No
+1091,1383,121222,Excellent,Brick,Y,Platinum,No
+1087,882,76242,Average,Frame,Y,Platinum,No
+1086,1008,91842,Average,Brick,N,Platinum,No
+1074,1058,94405,Excellent,Brick,N,Gold,No
+1053,1176,103685,Excellent,Brick,N,Platinum,No
+1042,860,73011,Average,Frame,N,Silver,No
+1037,1050,90321,Excellent,Brick,N,Platinum,No
+1023,852,75055,Average,Brick,N,Silver,No
+1022,1291,117084,Excellent,Brick,Y,Platinum,No
+1020,1156,99334,Average,Brick,Y,Platinum,No
+1013,1079,94669,Below Average,Brick,N,Platinum,No
+1006,1015,93827,Average,Brick,N,Platinum,No
