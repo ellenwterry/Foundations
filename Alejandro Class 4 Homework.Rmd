@@ -1,0 +1,331 @@
+---
+title: "Classification Homework 2 - Alejandro Hasselmeyer"
+author: "Alejandro Hasselmeyer"
+date: "10/1/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+library(tidyverse)
+library(MASS)
+library(caret)
+library(kableExtra)
+library(e1071)
+library(ISLR)
+library(rpart)
+library(DMwR)
+library(knitr)
+
+```
+##  Comparison of Algorithms
+Use the template that compares algorithms and then add a SMOTE section and compare again. Follow this template, except use the Employee Turnover data.
+
+### Data
+Using Employee Turnover data. 
+
+```{r, message=F, warning=F, fig.width=6, fig.height=3, fig.align="center"}
+
+set.seed(913)
+
+Turnover = read.csv("C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/EmpTurn2.csv")
+
+Turnover$Left = factor(if_else(Turnover$Left > 0, "Yes", "No"))
+#Turnover$Promotion = factor(if_else(Turnover$Promotion > 0, "Yes", "No"))
+
+
+Turnover = Turnover %>% rownames_to_column("SampleID")
+xTrain = sample_n(Turnover, round(nrow(Turnover)*.6))
+xTest = Turnover %>% anti_join(xTrain, by = "SampleID")
+
+  
+```
+
+
+### Logistic Regression
+Reminder: If the probability is greater than ~0.5 consider it a Left (Left = 1)
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+glModS = glm(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = xTrain, family = binomial)
+
+glmPred = predict(glModS, type = "response", newdata = xTest)
+xTest$glmPred = glmPred
+
+xTest$GLM = if_else(xTest$glmPred < .5, "No", "Yes")
+
+#At this point both GLM and Left are in chr - "Yes or No"
+
+CM = confusionMatrix(factor(xTest$GLM), factor(xTest$Left),  positive = "Yes")
+
+Summary = data.frame(Algorithm = "GLM",
+                     Sensitivity = CM$byClass[1],
+                     Specificity = CM$byClass[2],
+                     PosPredVal =  CM$byClass[3],
+                     NegPredVal =  CM$byClass[4],
+                     Prevalence = CM$byClass[8])
+
+```
+
+### Linear Discriminant Analysis
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+lda.fit = lda(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, xTrain) 
+lda.pred = predict(lda.fit, xTest)
+
+xTest$LDA =  lda.pred$class
+
+CM = confusionMatrix(xTest$LDA, factor(xTest$Left),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "LDA",
+                     Sensitivity = CM$byClass[1],
+                     Specificity = CM$byClass[2],
+                     PosPredVal =  CM$byClass[3],
+                     NegPredVal =  CM$byClass[4],
+                     Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Naive Bayes
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+NBmodel = naiveBayes(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion,  data = xTrain)
+xTest$NB = predict(NBmodel, xTest, prob = TRUE)
+
+CM = confusionMatrix( xTest$NB, factor(xTest$Left),  positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "NB",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Decision Tree
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+Treefit = rpart(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion,  
+              data = xTrain,
+             method="class")
+
+xTest$Tree = predict(Treefit, type = "class", newdata = xTest)  # factor
+
+CM = confusionMatrix(xTest$Tree, factor(xTest$Left),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "Tree",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Support Vector Machine
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+
+svmMod = svm(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = xTrain)
+xTest$SVM = predict(svmMod, xTest)
+
+CM = confusionMatrix(xTest$SVM, factor(xTest$Left), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "SVM",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+
+## SMOTE Sampling
+
+### Data Creation
+
+```{r, message=F, warning=F, echo = T, results = "hide", fig.width=4, fig.height=3, fig.align="center"}
+Turnover2 = read.csv("C:/Users/ellen/Documents/UH/Fall 2020/Github Staging/EllenwTerry/Foundations/EmpTurn2.csv")
+smoteBase = data.frame(dplyr::select(Turnover2, 
+                                     Satisfaction,   
+                                     Last_Eval,
+                                     Number_Projects,
+                                     Avg_Mo_Hrs, 
+                                     Tenure,
+                                     Work_Accident,
+                                     Left,  
+                                     Promotion,
+                                     Dept, 
+                                     Salary))
+
+smoteBase$Left = smoteBase$Left + 1
+smoteBase$Left = factor(as.character(smoteBase$Left))
+smoteBase$Dept = factor(as.character(smoteBase$Dept))
+smoteBase$Salary = factor(as.character(smoteBase$Salary))
+
+smoteData = SMOTE(Left ~ ., data = smoteBase, perc.over = 100, perc.under=200) # SMOTE only works with factors
+prop.table(table(smoteData$Left))
+sum(smoteData$Left == "2", na.rm = TRUE) 
+sum(smoteData$Left == "1", na.rm = TRUE) 
+
+train = smoteData
+test = sample_n(Turnover2, 100)
+
+test$Left = factor(if_else(test$Left > 0, "Yes", "No"))
+
+```
+### Logistic Regression with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+glModSmote = glm(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = train, family = binomial)
+glmPredSmote = predict(glModSmote, type = "response", newdata = test)
+test$GLMSmote = if_else(glmPredSmote < .5, "No", "Yes")
+
+
+CM = confusionMatrix(factor(test$GLMSmote), factor(test$Left),   positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "GLMSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### LDA with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+lda.fit = lda(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, train) 
+lda.pred = predict(lda.fit, test)
+
+test$LDASmote =  lda.pred$class
+test$LDASmote = as.character(test$LDASmote)
+test$LDASmote = if_else(test$LDASmote > 1, "Yes", "No")
+test$LDASmote = factor(test$LDASmote)
+
+CM = confusionMatrix(test$LDASmote,  factor(test$Left), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "LDASmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Naive Bayes with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+model = naiveBayes(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = train)
+test$NBSmote = predict(model, test, prob = TRUE)
+
+test$NBSmote = as.character(test$NBSmote)
+test$NBSmote = if_else(test$NBSmote > 1, "Yes", "No")
+test$NBSmote = factor(test$NBSmote)
+
+CM = confusionMatrix(test$NBSmote,  factor(test$Left), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "NBSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+### Decision Tree with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+TreefitSmote = rpart(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = train,
+             method="class")
+
+test$TreeSmote = predict(TreefitSmote, type = "class", newdata = test)  # factor
+
+test$TreeSmote = as.character(test$TreeSmote)
+test$TreeSmote = if_else(test$TreeSmote > 1, "Yes", "No")
+test$TreeSmote = factor(test$TreeSmote)
+
+CM = confusionMatrix( test$TreeSmote, factor(test$Left),positive = "Yes")
+
+
+Summaryadd = data.frame(Algorithm = "TreeSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+```
+
+### SVM with SMOTE
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+svmMod = svm(Left ~ Satisfaction + Last_Eval + Number_Projects + Avg_Mo_Hrs + 
+                Tenure + Promotion, data = train)
+
+test$SVMSmote = predict(svmMod, test)
+
+test$SVMSmote = as.character(test$SVMSmote)
+test$SVMSmote = if_else(test$SVMSmote > 1, "Yes", "No")
+test$SVMSmote = factor(test$SVMSmote)
+
+CM = confusionMatrix(test$SVMSmote,  factor(test$Left), positive = "Yes")
+
+Summaryadd = data.frame(Algorithm = "SVMSmote",
+                       Sensitivity = CM$byClass[1],
+                       Specificity = CM$byClass[2],
+                       PosPredVal =  CM$byClass[3],
+                       NegPredVal =  CM$byClass[4],
+                       Prevalence = CM$byClass[8])
+
+Summary = bind_rows(Summary, Summaryadd)
+
+
+```
+
+## Results and Review
+
+```{r, message=F, warning=F, eval=T, echo=T}
+
+table = knitr::kable(Summary) %>%
+  kable_styling(full_width = F, bootstrap_options = "striped", font_size = 9)
+table
+
+```
+
