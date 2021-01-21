@@ -48,3 +48,4 @@ mX = model.matrix(price ~ make + horsepower,  Autos)
 vBeta = solve(t(mX)%*%mX, t(mX)%*%vY) # solve using normal equations                    
 as.numeric(model$coefficients)
     
+

@@ -31,6 +31,9 @@ p
 Y <- mydata$Y
 X <- mydata$X
 X <- as.matrix(cbind(1, X))
+# or
+#
+X = model.matrix(Y ~ X, mydata)
 
 A = cbind(X, Y)
 

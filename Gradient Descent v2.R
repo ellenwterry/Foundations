@@ -44,7 +44,7 @@ p
 # set up the gradient descent
 
 
-# now decrease the threshold
+# now increase the threshold
 alpha <- 0.001
 # start with .001, increase to .01 and .1 and finally, .2
 

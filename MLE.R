@@ -3,6 +3,35 @@ library(plotly)
 
 # recall from above how a binomial distribution works
 
+manBinom <- function(n, p, h)
+{
+  x <- factorial(n)/(factorial(h)*factorial(n-h))
+  x*(p)^h*(1-p)^(n-h)
+}
+
+manBinom(10, .4, 2)
+manBinom(10, .4, 4)
+manBinom(10, .4, 6)
+
+ggplot(data = data.frame(h = c(2, 4, 6), 
+                         p = c(manBinom(10, .4, 2), manBinom(10, .4, 4), manBinom(10, .4, 6))))+
+        geom_histogram(aes(x = h, y = p), stat = 'identity') 
+  
+
+# note that the top portion of the pdf above does not include p, 
+# so, if we're only interested in finding p, we don't need it 
+
+# the likelihood is not the density or the probability, but it is proportionate to those. 
+# It is constructed to measure p  - what's the likelihood of a probability!!
+# for example: .1, .4 and .9. It is derived from the binomial density function
+# but the probabilty function above can be simplified if we hold k and n constant 
+
+L = function(p,k,n) p^k*(1-p)^(n-k) 
+
+L(.1,4,10)
+L(.4,4,10)
+L(.9,4,10)
+
 # read logmodels2 in blackboard
 # then go to the Probability and Statistics Cheatsheet 
 # and get the equations for binomial and normal distributions 
@@ -16,6 +45,8 @@ K = 4
 L = function(p,k,n) p^k*(1-p)^(n-k) 
 # The log-likelihood function 
 l = function(p,k,n) k*log(p) + (n-k)*log(1-p) 
+
+
 
 mu = seq(0,1,0.001) 
 
@@ -39,7 +70,7 @@ p
 
 
 # The optimization functions in R finds the minimum, not the maximum. We  
-# therefor must create new functions that return the negavive likelihood and  
+# therefore must create new functions that return the negavive likelihood and  
 # log-likelihood, and then minimize these:  
 # Minus likelihood:
 

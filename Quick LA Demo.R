@@ -2,6 +2,8 @@ library(tidyverse)
 
 setwd("C:/Users/ellen/Documents/UH/Fall 2020")
 
+set.seed(0118)
+
 mX = matrix(c(1, 8, 2, 6), nrow = 2, ncol = 2)
 B = c(1,3)
 B*mX
@@ -73,11 +75,16 @@ Advertising$yhat <- predict(mFit, Advertising)
 sample = sample_n(Advertising, 4)
 sample
 
+
+
 vBeta <- as.numeric(mFit$coefficients)
+str(mFit$coefficients) # this is a list
+str(vBeta) # this is a vector
 mX <- as.matrix(cbind(1, select(sample, TV, Radio))) # set up x values in matrix
+mX
 
 vBeta %*% mX 
-# this doesn't work because mX is 4x3 and vBeta is 3x1 (3 columns on left <> 1 column on right)
+# this doesn't work because mX is 4x3 and vBeta is 1x3 (3 columns on left <> 4 rows on right)
 # the number of columns on the left must equal the number of rows on the right... EXACTLY in that order, so
 
 vBeta%*%t(mX) # works, but let's transpose it so we can see it better
