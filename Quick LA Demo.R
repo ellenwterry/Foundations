@@ -78,6 +78,7 @@ sample
 
 
 vBeta <- as.numeric(mFit$coefficients)
+
 str(mFit$coefficients) # this is a list
 str(vBeta) # this is a vector
 mX <- as.matrix(cbind(1, select(sample, TV, Radio))) # set up x values in matrix

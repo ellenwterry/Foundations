@@ -45,11 +45,11 @@ p
 
 
 # now increase the threshold
-alpha <- 0.001
+alpha <- 0.2
 # start with .001, increase to .01 and .1 and finally, .2
 
 # holding alpha at .2
-epsilon <- .001
+epsilon <- 1
 # start with .001, increase to .1 and 1 and finally, 2
 
 

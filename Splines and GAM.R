@@ -8,17 +8,21 @@ Auto <- read.csv(file="Automobile Price Prediction.csv")
 
 p <- ggplot(Auto, aes(x=horsepower, y=price))+geom_point() 
 p
+
 modelBS <- lm(data = Auto, price ~  bs(horsepower, 3))
 Auto$BSPrice <- predict(modelBS, data = Auto)
+
 p <- ggplot(data=Auto) + geom_point(aes(x=horsepower, y = price), color = 'black')
 p <- p + geom_smooth(aes(x=horsepower, y = price), se=FALSE, color = "blue")
 p
+
 Intercept <- modelBS$coefficients[1]
 mb1 <- modelBS$coefficients[2]
 mb2 <- modelBS$coefficients[3]
 mb3 <- modelBS$coefficients[4]
 rng <- range(Auto$horsepower)
 div <- ((rng[2]-rng[1])/3)
+
 ## coefficients of the first model
 a1 <- seq(rng[1], rng[1]+div, length.out = 10)
 b1 <- seq(Intercept, Intercept+mb1, length.out = 10)

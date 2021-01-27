@@ -5,7 +5,7 @@ mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Data/Ex1LS.csv", 
 
 mydata$X1 <- mydata$X
 
-p <- ggplot(data = mydata) + geom_point(aes(x = X1, y = Y))
+p <- ggplot(data = mydata) + geom_point(aes(x = X1, y = Y), size = 4)
 p
 
 model <- lm( formula = Y ~ X, mydata)
@@ -19,10 +19,9 @@ predData$Y <- predict(model, predData)
 predData$Q <- predict(modelQ, predData)
 predData$NS <- predict(modelNS, predData)
 
-#p <- ggplot(predData, aes(x=X, y=Y)) + geom_point()
-#p <- p + geom_point(data = predData, aes(x=X, y = Y), color = 'black')
-#p <- p + geom_point(data = predData, aes(x=X, y = Q), color = 'red')
-#p <- p + geom_point(data = predData, aes(x=X, y = NS), color = 'blue')
+p <- p + geom_point(data = predData, aes(x=X, y = Y), color = 'black')
+p <- p + geom_point(data = predData, aes(x=X, y = Q), color = 'red')
+p <- p + geom_point(data = predData, aes(x=X, y = NS), color = 'blue')
 p <- p + geom_smooth(data=predData, aes(x=X, y = Y), se=FALSE, color = "black")
 p <- p + geom_smooth(data=predData, aes(x=X, y = Q), se=FALSE, color = "red")
 p <- p + geom_smooth(data=predData, aes(x=X, y = NS), se=FALSE, color = "blue")
@@ -31,6 +30,16 @@ p
 summary(model)
 summary(modelQ)
 summary(modelNS)
+
+# increasing knots
+
+modelNS2 <- lm(data = mydata, Y ~ ns(X, 4)) # you can also specifically set knots, but beware
+predData$NS2 <- predict(modelNS2, predData)
+p <- p + geom_smooth(data=predData, aes(x=X, y = NS2), se=FALSE, color = "green")
+p
+
+
+# this model is obviously overly complex and it will be high variance
 
 
 

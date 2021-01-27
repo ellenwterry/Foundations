@@ -6,7 +6,7 @@ rmse = function(error)
 }
 
 #setwd("/home/ellen/Documents/Spring2020/DA2/Section I/Introduction/data")
-setwd("C:/Users/ellen/OneDrive/Documents/Spring 2020/DA2/Section 1/Regression/Data")
+setwd("C:/Users/ellen/OneDrive/Documents/GitHub/EllenwTerry/Foundations")
 
 
 mydata <- read.csv(file="Ex1LS.csv", header=TRUE, sep=",")
