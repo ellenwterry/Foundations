@@ -1,13 +1,5 @@
 library(tidyverse)
 
-# this function calculates rmse from a vector of (y - y_hat) values:
-
-rmse <- function(error)
-{
-  sqrt(mean(error^2))
-}
-
-
 mydata <- read.csv(file="C:/Users/ellen/Documents/UH/Fall 2020/Data/Ex1LS.csv", header=TRUE, sep=",")
 
 model <- lm( formula = Y ~ X, mydata)
@@ -46,6 +38,7 @@ lambda = c(0,1,10)
 d = diag(1,n,n)
 d[1,1] = 0 
 # set reg term to 0 for intercept
+
 # remember we set the intercept = 1 and backsolve
 th = array(0,c(n,length(lambda)))
 
@@ -64,20 +57,31 @@ as.numeric(betaHat)
 
 # but now, betaHat, not penalized is:
 
-lambda[1]*d
-# and
 betaHat <- solve(t(x) %*% x + (lambda[1] * d)) %*% (t(x) %*% y)
+
 # so no change, which is what we would expect.
 # now for reg term = 1
-betaHat <- solve(t(x) %*% x + (lambda[2] * d)) %*% (t(x) %*% y)
-# now for reg term = 10
-betaHat <- solve(t(x) %*% x + (lambda[3] * d)) %*% (t(x) %*% y)
 
-# if you wanted to just plug in your own value, say 5:
-betaHat <- solve(t(x) %*% x + (5 * d)) %*% (t(x) %*% y)
+betaHat <- solve(t(x) %*% x + (lambda[2] * d)) %*% (t(x) %*% y)
+
+# recall that we're solving for betahat - the vector of coefficients
+# and we want them to have less effect, we want to reduce the impact
+# so we're increasing X multiples, which decreases the parameter values
+# we could just add 1, it becomes
+
+solve(t(x) %*% x + (1*d)) %*% (t(x) %*% y)
+
+# or add 5 (which adds more penalty)
+
+solve(t(x) %*% x + (5*d)) %*% (t(x) %*% y)
+
+
+# or 10
+
+solve(t(x) %*% x + (10 * d)) %*% (t(x) %*% y)
+
 # you still need the diagonal to multiply by x, which has 3 columns
 # also remember that this is element multiplication, not matrix (dot product)
-
 
 
 
@@ -108,7 +112,7 @@ p
 
 # ----------- end of visual sequence ----------------- #
 
-# now let's check the errors
+# now let's check the errors. Refresh data:
 
 x = matrix(c(rep(1, nrow(mydata)), mydata$X, mydata$X^2), ncol = 3)
 
@@ -117,36 +121,18 @@ x = matrix(c(rep(1, nrow(mydata)), mydata$X, mydata$X^2), ncol = 3)
 x = model.matrix(Y ~ X, mydata)
 xq = model.matrix(Y ~ X + I(X^2), mydata)
 
-# recompute unpenalized betas #
+# recompute unpenalized betas 
 
 betaHat <- solve(t(x)%*%x) %*% t(x) %*%y
 betaHatQ <- solve(t(xq)%*%xq) %*% t(xq) %*%y
 
 # and compute errors
-
-# just for comparison
-
-rmse((x %*% betaHat)- mydata$Y)  
-
-# just for comparison, here's how lm calucalates rmse:
-
-k=length(model$coefficients)-1 #Subtract one to ignore intercept
-SSE=sum(model$residuals^2)
-n=length(model$residuals)
-sqrt(SSE/(n-(1+k))) 
-
-# the problem here is that there's no data and df = 1, so huge variance in methods
-# we'll get into all this later
-
-# for now, let's compare the quadratic models
-
-# --- blue (using both theta sources)
-rmse((xq %*% betaHatQ)- mydata$Y)  
-rmse((xq %*% th[,1])- mydata$Y)  
+# --- blue
+sqrt(sum(((xq %*% betaHatQ)- mydata$Y)^2)/(nrow(betaHat)))
 # --- red
-rmse((xq %*% th[,2])- mydata$Y)  
+sqrt(sum(((xq %*% th[,2])- mydata$Y)^2)/(nrow(betaHat)))
 # --- green
-rmse((xq %*% th[,3])- mydata$Y)  
+sqrt(sum(((xq %*% th[,3])- mydata$Y)^2)/(nrow(betaHat)))
 
 # so the blue has the lowest error
 
@@ -161,12 +147,11 @@ p
 
 xq2 = model.matrix(Y ~ X + I(X^2), newData)
 
-# --- blue (using both theta sources)
-rmse((xq2 %*% betaHatQ)- newData$Y)  
-rmse((xq2 %*% th[,1])- newData$Y)  
+# --- blue 
+sqrt(sum(((xq2 %*% betaHatQ)- newData$Y)^2)/(nrow(betaHat)))
 # --- red
-rmse((xq2 %*% th[,2])- newData$Y)  
+sqrt(sum(((xq2 %*% th[,2])- newData$Y)^2)/(nrow(betaHat)))
 # --- green
-rmse((xq2 %*% th[,3])- newData$Y)  
+sqrt(sum(((xq2 %*% th[,3])- newData$Y)^2)/(nrow(betaHat)))
 
 # and now the lowest error is green. WHY?
