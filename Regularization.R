@@ -35,13 +35,13 @@ y = matrix(mydata$Y, ncol=1)
 
 
 lambda = c(0,1,10)
-d = diag(1,n,n)
-d[1,1] = 0 
-# set reg term to 0 for intercept
+d = diag(1,n,n) # needs to be number of columns (coefficients)
+d[1,1] = 0  # set reg term to 0 for intercept (we don't regularize the intercept - it's the leftover)
 
-# remember we set the intercept = 1 and backsolve
 th = array(0,c(n,length(lambda)))
 
+# this is a loop I set up to run through a series for plotting 
+# - you won't need to do this, but it's here if you like
 for (i in 1:length(lambda)) {
   th[,i] = solve(t(x) %*% x + (lambda[i] * d)) %*% (t(x) %*% y)
   print(i)
