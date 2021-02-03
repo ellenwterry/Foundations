@@ -18,7 +18,7 @@ pl1 <- ggplot(dfDefault, aes(balance, fill = default))  +
   theme(panel.background = element_rect(fill = "white")) 
 pl1
 
-# when you get into equations and many modeling algortihms, you'll find that 
+# when you get into equations and many modeling algorithms, you'll find that 
 # variable values need to be integers (0 and 1 only), and factors will often convert to 1, 2:
 unique(as.numeric(dfDefault[,"default"]))
 dfDefault$default <- as.integer(dfDefault$default)-1
@@ -50,6 +50,7 @@ summary(glMod2)
 test$mProb2 <- predict(glMod2, type = "response", newdata = test)
 
 mTest = model.matrix(default ~ student + balance + income, data = test)
+
 bet1 <- as.numeric(glMod2$coefficients)
 test$tmProb2 <- exp( t(bet1%*%t(mTest)))/(1+exp(t(bet1%*%t(mTest))))
 
@@ -58,11 +59,12 @@ ggplot(test, aes(x=balance, y=tmProb2, color = factor(student))) +
   geom_point() +
   theme(panel.background = element_rect(fill = "white")) 
 
-
 # let prove the eqquation out:
 sum(round(test$tProb - test$mProb,0))
 
 # how did we do? 
+
+
 
 test$class = factor(if_else(test$tmProb < .5, "No", "Yes"))  
 test$D2 = factor(if_else(test$default < .5, "No", "Yes"))  
