@@ -1,6 +1,6 @@
 
 ---
-title: "Class 2 Exercise  - Regression and Regularization"
+title: "Class_2_Homework_Hints"
 output: pdf_document
 ---
 
