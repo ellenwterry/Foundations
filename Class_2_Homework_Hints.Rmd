@@ -12,12 +12,13 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r, message=F, warning=F, eval=T, echo=F}
 
 library(tidyverse)
+library(lubridate)
 library(kableExtra)
 
 ```
 
 
-```{r, message=F, warning=F, fig.width=7, fig.height=5, fig.align="center", eval=T, echo=T}
+```{r, message=F, warning=F, fig.width=6, fig.height=4, fig.align="center", eval=T, echo=T}
 
 
 setwd("C:/Users/ellen/Documents/UH/Spring 2020/DA2/Section 1/MIdTerm")
@@ -45,12 +46,9 @@ Train = ProductSales %>% filter(WkBeg < "2015-01-01")
 Test  =  ProductSales %>%  filter(WkBeg >= "2015-01-01")
 
 
-
 # lm polynomial  ----------------- #
 
 TestMod2 = lm(Sales ~ Product + Wk + I(Wk^2), data = Train)
-summary(TestMod2)
-
 
 rmse2 = rmse( Test$Sales - predict(TestMod2, Test))
 rmse2
@@ -58,7 +56,7 @@ rmse2
 ```
 
 
-```{r, message=F, warning=F, fig.width=7, fig.height=5, fig.align="center", eval=T, echo=T}
+```{r, message=F, warning=F, fig.width=6, fig.height=4, fig.align="center", eval=T, echo=T}
 
 mXPoly = model.matrix(Sales ~ Product + Wk + I(Wk^2), data = Train)
 vY = as.numeric(Train$Sales)
@@ -112,7 +110,7 @@ So the penalty of 60 got an rmse under 12.85
 
 Solving:
 
-```{r, message=F, warning=F, fig.width=7, fig.height=5, fig.align="center", eval=T, echo=T}
+```{r, message=F, warning=F, fig.width=6, fig.height=4, fig.align="center", eval=T, echo=T}
 
 Test$Pred =  t(as.numeric(vBetaReg2)%*%t(mXPolyTest))
 
