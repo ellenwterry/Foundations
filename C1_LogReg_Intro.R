@@ -32,6 +32,7 @@ test <- dfDefault %>% anti_join(train, by = "SampleID")
 glm.fit <- glm(default ~ student, data = dfDefault, family = binomial)
 summary(glm.fit)
 dfDefault$Prob <- predict(glm.fit, type = "response")
+# you must use "response" type to get probabilities
 ggplot(dfDefault, aes(x=balance, y=Prob)) + geom_point()  
 
 
