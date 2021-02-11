@@ -19,6 +19,7 @@ dfDefault <- dfDefault %>% rownames_to_column("SampleID")
 xTrain <- sample_n(dfDefault, round(nrow(dfDefault)*.6,0))
 xTest <- dfDefault %>% anti_join(xTrain, by = "SampleID")
 
+library(DMwR)
 smoteData <- SMOTE(default ~ student + balance + income, data = Default, 
                    perc.over = 350, perc.under=130) 
 # SMOTE only works with factors, so be careful
@@ -33,5 +34,4 @@ lda.pred <- predict(lda.fit, xTest)
 xTest$LDASmote =  lda.pred$class
 
 confusionMatrix(xTest$LDASmote,  factor(xTest$default), positive = "Yes")
-
 

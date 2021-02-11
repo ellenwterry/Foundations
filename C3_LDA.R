@@ -18,7 +18,6 @@ pl1 <- ggplot(dfDefault, aes(balance, fill = default))
 pl1 <- pl1 + geom_density(alpha = 0.2, adjust = 5 )
 pl1
 
-
 # ----------------- 
 
 lda.fit <- lda(default ~ balance, data = dfDefault) 
@@ -41,7 +40,7 @@ C <- s2.k/(lda.fit$means[1] - lda.fit$means[2])
 dr <- A + B * C
 dr
 
-p <- p + geom_vline(xintercept = dr )
+p <- p + geom_vline(xintercept = dr, color = "red" )
 p
 
 tst = confusionMatrix(factor(lda.pred$class) ,  factor(dfDefault$default), positive = "Yes")
@@ -73,10 +72,6 @@ dfPred %>% dplyr::count(pred)
 
 
 confusionMatrix(factor(pred), factor(dfDefault$default),   positive = "Yes")
-
-
-
-
 
 
 # now splitting into validation sets
@@ -114,14 +109,11 @@ lda.fit
 
 lda.pred <- predict(lda.fit, xTest)
 
-
 confusionMatrix( lda.pred$class, factor(xTest$default), positive = "Yes")
 
-
 # get back orignial and look at it:
-finalAnalysis <- as_tibble(cbind(as.character(lda.pred$class), as.character(xTest$default), lda.pred$posterior))
-finalAnalysis <- cbind(finalAnalysis,dplyr::select(xTest, student, balance, income))
-
+#finalAnalysis <- as_tibble(cbind(as.character(lda.pred$class), as.character(xTest$default), lda.pred$posterior))
+#finalAnalysis <- cbind(finalAnalysis,dplyr::select(xTest, student, balance, income))
 #write_csv(finalAnalysis, "finalAnalysis.csv")
 
 

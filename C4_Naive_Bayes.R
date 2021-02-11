@@ -26,7 +26,8 @@ xTest$pred <- predict(model, xTest, prob = TRUE)
 
 confusionMatrix(factor(xTest$pred), (xTest$default),  positive = "Yes")
 
-# ROC Curve 
+# ROC Curve https://en.wikipedia.org/wiki/Receiver_operating_characteristic
+# it measures the true positive vs false positive *rate* 
 
 probs <- predict(model, xTest, type = 'raw')
 
@@ -38,5 +39,11 @@ plot(perf_nb)
 auc<- performance(pred,"auc")
 auc
 
+# compare 
 
+pred <- prediction(probs[, "No"], xTest$default)
+perf_nb <- performance(pred, measure = 'tpr', x.measure = 'fpr')
+plot(perf_nb)
+auc<- performance(pred,"auc")
+auc
 

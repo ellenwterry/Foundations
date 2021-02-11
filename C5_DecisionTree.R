@@ -3,6 +3,7 @@ library(rpart.plot)
 library(RColorBrewer)
 library(ISLR)
 library(rpart)
+library(caret)
 
 set.seed(913)
 
@@ -29,4 +30,8 @@ confusionMatrix(factor(xTest$pred), (xTest$default),  positive = "Yes")
 # Recursive Partitioning and Regression Trees
 
 rpart.plot(fit, box.palette="RdBu", shadow.col="gray", nn=TRUE)
+
+
+
+
 
