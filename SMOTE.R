@@ -19,6 +19,9 @@ dfDefault <- dfDefault %>% rownames_to_column("SampleID")
 xTrain <- sample_n(dfDefault, round(nrow(dfDefault)*.6,0))
 xTest <- dfDefault %>% anti_join(xTrain, by = "SampleID")
 
+prop.table(table(dfDefault$default))
+
+
 library(DMwR)
 smoteData <- SMOTE(default ~ student + balance + income, data = Default, 
                    perc.over = 350, perc.under=130) 
