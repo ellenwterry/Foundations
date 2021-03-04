@@ -111,7 +111,9 @@ fold1 <- Auto[cvIndex$Fold1,] %>% dplyr::count(make, `body-style`)
 fold2 <- Auto[cvIndex$Fold2,] %>% dplyr::count(make, `body-style`)
 test <- fold1 %>% left_join(fold2, by = c("make" = "make", "body-style" = "body-style"))
 
-# this isn't going to work - see slide -----------------------------
+# this isn't going to work - not enough data - see slide -----------------------------
+# stratified sampling with work, but not cv.
+
 
 # New subject Combining CV with Tuning
 
@@ -163,7 +165,6 @@ time2 <- Sys.time()
 time2 - time1 # Time difference of 6 mins
 
 results
-
 
 
 # ------------------------------ OK, now to classification data --------------------- #

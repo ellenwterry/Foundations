@@ -22,6 +22,8 @@ xTest <- anti_join(homeSales, xTrain, by = "LISTID")
 model <- lm( SALE_PRICE~ZIP + SQF + YEAR_BUILT, xTrain)
 xTest$PREDSALEPRICE <- predict(model, xTest)
 
+tst = model.matrix(SALE_PRICE~ZIP + SQF + YEAR_BUILT, xTrain)
+
 
 # so we have to stratify so that the training and test set are balanced
 
